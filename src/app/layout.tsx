@@ -12,14 +12,15 @@ export default function Layout({ children }) {
     <html style={font.style}>
       <body>
         <header>
-          <h1>@billiano</h1>
           <nav>
+            <h1>
+              <Link href="/" className="blank">
+                @billiano
+              </Link>
+            </h1>
             <ul>
               <li>
-                <Link href="/">Home</Link>
-              </li>
-              <li>
-                <Link href="/">About Me</Link>
+                <Link href="/about">About Me</Link>
               </li>
             </ul>
           </nav>
