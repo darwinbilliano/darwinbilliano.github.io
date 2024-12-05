@@ -1,19 +1,40 @@
 :root {
+  --clr-accent-base: hsl(357, 80%, 40%);
+  --clr-accent-lighter: hsl(357, 80%, 42%);
+  --clr-body: hsl(230, 10%, 3%);
   --clr-header: hsl(357, 80%, 40%);
-  --clr-body: hsl(230, 10%, 2%);
   --clr-text: hsl(0, 0%, 100%);
+  --clr-border: hsla(0, 0%, 100%, 30%);
 }
 
+/* globals */
 
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
 }
 
 a {
   color: inherit;
+
+  &.button {
+    display: inline-block;
+    padding: 0.6rem 1.6rem;
+    margin-block: 1rem;
+    text-decoration: none;
+    background-color: var(--clr-accent-base);
+    border-radius: 1rem;
+
+    &:hover {
+      background-color: var(--clr-accent-lighter);
+    }
+  }
 }
 
+/* body */
 
 body {
   display: flex;
@@ -23,67 +44,92 @@ body {
   color: var(--clr-text);
 }
 
+/* header and footer */
 
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   position: sticky;
   top: 0;
-  padding-inline: 3rem;
   background: var(--clr-header);
+  border-color: var(--clr-border);
+  border-bottom-width: 1px;
   font-weight: bold;
 
-  h1 {
-    font-size: 140%;
+  * {
+    display: inline-block;
   }
 }
 
 nav {
-  * {
-    display: inline-block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 3rem;
+
+  h1 {
+    font-size: 140%;
+    a {
+      text-decoration: none;
+    }
   }
 
   ul {
     list-style: none;
   }
 
-  a {
-    padding: 1rem 2rem;
-    text-decoration: none;
+  li {
+    a {
+      text-decoration: none;
+      padding: 1rem 2rem;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }
-
-
-main {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
-section {
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 40rem;
-  align-self: center;
-  padding: 2rem 3rem;
-}
-
 
 footer {
   padding: 1rem;
   text-align: center;
 }
 
+/* main and sections */
 
-/* temporary style to header */
+main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 
-nav {
-  visibility: hidden;
+  &.justify-center {
+    justify-content: center;
+  }
 }
 
-@media (max-width: 786px) {
-  header {
-    display: none;
+section {
+  width: 100%;
+  padding: 2rem 3rem;
+
+  &.align-center {
+    align-self: center;
+  }
+
+  &.align-right {
+    align-self: flex-end;
+  }
+
+  &.size-small {
+    max-width: 30rem;
+  }
+
+  &.size-medium {
+    max-width: 40rem;
+  }
+
+  &.text-center {
+    text-align: center;
+  }
+
+  &.text-justify {
+    text-align: justify;
   }
 }
