@@ -7,11 +7,13 @@ export const metadata: Metadata = {
 
 export default function NotFound() {
   return (
-    <main>
-      <section>
-        <h1>404</h1>
+    <main className="justify-center">
+      <section className="align-center size-medium text-center">
+        <h1>Page not found</h1>
         <p>There&apos;s nothing here</p>
-        <Link href="/">Go back</Link>
+        <Link href="/" className="button">
+          Go back
+        </Link>
       </section>
     </main>
   );
