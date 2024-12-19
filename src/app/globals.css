@@ -10,9 +10,9 @@
 /* globals */
 
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   border-width: 0;
   border-style: solid;
 }
@@ -60,13 +60,14 @@ header {
 }
 
 nav {
+  align-items: center;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding-inline: 3rem;
 
   h1 {
     font-size: 140%;
+
     a {
       text-decoration: none;
     }
@@ -78,8 +79,8 @@ nav {
 
   li {
     a {
-      text-decoration: none;
       padding: 1rem 2rem;
+      text-decoration: none;
 
       &:hover {
         text-decoration: underline;
@@ -97,8 +98,8 @@ footer {
 
 main {
   display: flex;
-  flex-direction: column;
   flex: 1;
+  flex-direction: column;
 
   &.justify-center {
     justify-content: center;
@@ -106,8 +107,8 @@ main {
 }
 
 section {
-  width: 100%;
   padding: 2rem 3rem;
+  width: 100%;
 
   &.align-center {
     align-self: center;

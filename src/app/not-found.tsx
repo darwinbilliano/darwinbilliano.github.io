@@ -11,7 +11,7 @@ export default function NotFound() {
       <section className="align-center size-medium text-center">
         <h1>Page not found</h1>
         <p>There&apos;s nothing here</p>
-        <Link href="/" className="button">
+          <Link className="button" href="/">
           Go back
         </Link>
       </section>
