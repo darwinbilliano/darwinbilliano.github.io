@@ -49,10 +49,13 @@ body {
 header {
   position: sticky;
   top: 0;
-  background: var(--clr-header);
-  border-color: var(--clr-border);
-  border-bottom-width: 1px;
   font-weight: bold;
+
+  &.fill {
+    background: var(--clr-header);
+    border-bottom-width: 1px;
+    border-color: var(--clr-border);
+  }
 
   * {
     display: inline-block;
