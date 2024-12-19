@@ -1,8 +1,8 @@
 import Link from "next/link";
 
-export default function Header() {
+export default function Header({ transparent }: { transparent?: boolean }) {
   return (
-    <header>
+    <header className={transparent ? "" : "fill"}>
       <nav>
         <h1>
           <Link href="/">@billiano</Link>
