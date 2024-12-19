@@ -1,5 +1,6 @@
+import Footer from "@/components/footer";
+import Header from "@/components/header";
 import { Nunito_Sans } from "next/font/google";
-import Link from "next/link";
 import "./globals.css";
 
 const font = Nunito_Sans({
@@ -7,29 +8,13 @@ const font = Nunito_Sans({
   weight: "400",
 });
 
-export default function Layout({ children }) {
+export default function RootLayout({ children }) {
   return (
-    <html style={font.style}>
+    <html className={font.className}>
       <body>
-        <header>
-          <nav>
-            <h1>
-              <Link href="/" className="blank">
-                @billiano
-              </Link>
-            </h1>
-            <ul>
-              <li>
-                <Link href="/about">About Me</Link>
-              </li>
-            </ul>
-          </nav>
-        </header>
+        <Header />
         {children}
-        <footer>
-          <p>&copy; 2024 Darwin Billiano</p>
-          <p>This website is under construction...</p>
-        </footer>
+        <Footer />
       </body>
     </html>
   );
