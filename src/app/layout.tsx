@@ -1,5 +1,3 @@
-import Footer from "@/components/footer";
-import Header from "@/components/header";
 import { Nunito_Sans } from "next/font/google";
 import "./globals.css";
 
@@ -11,11 +9,7 @@ const font = Nunito_Sans({
 export default function RootLayout({ children }) {
   return (
     <html className={font.className}>
-      <body>
-        <Header />
-        {children}
-        <Footer />
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
