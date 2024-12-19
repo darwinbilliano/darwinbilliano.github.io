@@ -11,7 +11,7 @@ export default function Home() {
       <section className="align-center size-medium text-center">
         <h1>Darwin Billiano</h1>
         <p>Hi! I&apos;m a hobbyist programmer</p>
-        <Link href="/about" className="button">
+          <Link className="button" href="/about">
           Learn more
         </Link>
       </section>
