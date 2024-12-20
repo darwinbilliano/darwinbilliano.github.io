@@ -1,13 +1,14 @@
+/* variables */
+
 :root {
-  --clr-accent-base: hsl(357, 80%, 40%);
-  --clr-accent-lighter: hsl(357, 80%, 42%);
-  --clr-body: hsl(230, 10%, 3%);
-  --clr-header: hsl(357, 80%, 40%);
-  --clr-text: hsl(0, 0%, 100%);
+  --clr-primary: hsl(230, 10%, 3%);
+  --clr-accent: hsl(357, 80%, 40%);
+  --clr-accent-light: hsl(357, 80%, 42%);
+  --clr-white: hsl(0, 0%, 100%);
   --clr-border: hsla(0, 0%, 100%, 30%);
 }
 
-/* globals */
+/* base */
 
 * {
   box-sizing: border-box;
@@ -25,26 +26,24 @@ a {
     padding: 0.6rem 1.6rem;
     margin-block: 1rem;
     text-decoration: none;
-    background-color: var(--clr-accent-base);
+    background-color: var(--clr-accent);
     border-radius: 1rem;
 
     &:hover {
-      background-color: var(--clr-accent-lighter);
+      background-color: var(--clr-accent-light);
     }
   }
 }
 
-/* body */
+/* layout */
 
 body {
   display: flex;
   flex-direction: column;
   min-height: 100dvh;
-  background-color: var(--clr-body);
-  color: var(--clr-text);
+  background-color: var(--clr-primary);
+  color: var(--clr-white);
 }
-
-/* header and footer */
 
 header {
   position: sticky;
@@ -52,7 +51,7 @@ header {
   font-weight: bold;
 
   &.fill {
-    background: var(--clr-header);
+    background: var(--clr-accent);
     border-bottom-width: 1px;
     border-color: var(--clr-border);
   }
@@ -96,8 +95,6 @@ footer {
   padding: 1rem;
   text-align: center;
 }
-
-/* main and sections */
 
 main {
   display: flex;
