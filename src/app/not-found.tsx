@@ -12,13 +12,15 @@ export default function NotFound() {
     <>
       <Header />
       <main className="justify-center">
-        <section className="align-center size-medium text-center">
-          <h1>Page not found</h1>
-          <p>There&apos;s nothing here</p>
-          <Link className="button" href="/">
-            Go back
-          </Link>
-        </section>
+        <div className="section-container">
+          <section className="align-center size-medium text-center">
+            <h1>Page not found</h1>
+            <p>There&apos;s nothing here</p>
+            <Link className="button" href="/">
+              Go back
+            </Link>
+          </section>
+        </div>
       </main>
       <Footer />
     </>
