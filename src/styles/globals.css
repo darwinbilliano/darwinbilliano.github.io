@@ -2,9 +2,11 @@
 
 :root {
   --clr-primary: hsl(230, 10%, 3%);
+  --clr-secondary: hsl(230, 10%, 5%);
   --clr-accent: hsl(357, 80%, 40%);
   --clr-accent-light: hsl(357, 80%, 42%);
   --clr-white: hsl(0, 0%, 100%);
+  --clr-white-dark: hsl(0, 0%, 80%);
   --clr-border: hsla(0, 0%, 100%, 30%);
 }
 
@@ -33,6 +35,12 @@ a {
       background-color: var(--clr-accent-light);
     }
   }
+}
+
+hr {
+  margin-block: 1rem;
+  border-color: var(--clr-white-dark);
+  border-top-width: 1px;
 }
 
 /* layout */
@@ -132,5 +140,14 @@ section {
 
   &.text-justify {
     text-align: justify;
+  }
+}
+
+.section-container {
+  display: flex;
+  flex-direction: column;
+
+  &:nth-child(even) {
+    background-color: var(--clr-secondary);
   }
 }
