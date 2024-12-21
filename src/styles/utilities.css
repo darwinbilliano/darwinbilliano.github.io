@@ -1,0 +1,67 @@
+/* box alignment */
+
+.self-center {
+  align-self: center;
+}
+
+.self-right {
+  align-self: flex-end;
+}
+
+/* typography */
+
+.font-normal {
+  font-weight: normal;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.text-base {
+  font-size: 1rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.no-decoration {
+  text-decoration: none;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.normal-case {
+  text-transform: none;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
