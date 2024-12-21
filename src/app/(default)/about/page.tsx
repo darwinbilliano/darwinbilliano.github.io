@@ -8,9 +8,11 @@ export default function About() {
   return (
     <main>
       <div className="section-container">
-        <section className="align-center size-medium text-justify">
-          <h1>Hey there! I&apos;m Darwin Billiano</h1>
-          <hr />
+        <section className="section-medium self-center text-justify">
+          <h1 className="font-bold text-2xl">
+            Hey there! I&apos;m Darwin Billiano
+          </h1>
+          <br />
           <p>
             I&apos;m a hobbyist programmer since 2019. I began my programming
             journey through a simple top-down shooter game I made using Java.
@@ -34,8 +36,8 @@ export default function About() {
         </section>
       </div>
       <div className="section-container">
-        <section className="align-center size-medium">
-          <h1>Skills</h1>
+        <section className="section-medium self-center">
+          <h1 className="font-bold text-2xl">Skills</h1>
           <ul>
             <li>C#</li>
             <li>Avalonia UI</li>

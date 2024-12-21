@@ -1,8 +1,9 @@
 import Link from "next/link";
+import type { HTMLProps } from "react";
 
-export default function Header({ transparent }: { transparent?: boolean }) {
+export default function Header({ className }: HTMLProps<HTMLDivElement>) {
   return (
-    <header className={transparent ? "" : "fill"}>
+    <header className={className}>
       <nav>
         <h1>
           <Link href="/">@billiano</Link>

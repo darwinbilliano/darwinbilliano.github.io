@@ -1,47 +1,7 @@
-/* variables */
-
-:root {
-  --clr-primary: hsl(230, 10%, 3%);
-  --clr-secondary: hsl(230, 10%, 5%);
-  --clr-accent: hsl(357, 80%, 40%);
-  --clr-accent-light: hsl(357, 80%, 42%);
-  --clr-white: hsl(0, 0%, 100%);
-  --clr-white-dark: hsl(0, 0%, 80%);
-  --clr-border: hsla(0, 0%, 100%, 30%);
-}
-
-/* base */
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  border-width: 0;
-  border-style: solid;
-}
-
-a {
-  color: inherit;
-
-  &.button {
-    display: inline-block;
-    padding: 0.6rem 1.6rem;
-    margin-block: 1rem;
-    text-decoration: none;
-    background-color: var(--clr-accent);
-    border-radius: 1rem;
-
-    &:hover {
-      background-color: var(--clr-accent-light);
-    }
-  }
-}
-
-hr {
-  margin-block: 1rem;
-  border-color: var(--clr-white-dark);
-  border-top-width: 1px;
-}
+@import "./base.css";
+@import "./components.css";
+@import "./theme.css";
+@import "./utilities.css";
 
 /* layout */
 
@@ -49,23 +9,36 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100dvh;
-  background-color: var(--clr-primary);
-  color: var(--clr-white);
+  font-family: var(--font-nunito-sans);
+  background-color: var(--color-primary);
+  color: var(--color-white);
 }
 
 header {
   position: sticky;
   top: 0;
   font-weight: bold;
+  background: var(--color-accent);
+  border-bottom-width: 1px;
+  border-color: var(--color-transparent-300);
 
-  &.fill {
-    background: var(--clr-accent);
-    border-bottom-width: 1px;
-    border-color: var(--clr-border);
+  &.home {
+    position: fixed;
+    width: 100%;
+    background: none;
+    border-bottom-width: 0;
   }
 
   * {
     display: inline-block;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    &.home {
+      display: none;
+    }
   }
 }
 
@@ -118,28 +91,12 @@ section {
   padding: 2rem 3rem;
   width: 100%;
 
-  &.align-center {
-    align-self: center;
-  }
-
-  &.align-right {
-    align-self: flex-end;
-  }
-
-  &.size-small {
+  &.section-small {
     max-width: 30rem;
   }
 
-  &.size-medium {
+  &.section-medium {
     max-width: 40rem;
-  }
-
-  &.text-center {
-    text-align: center;
-  }
-
-  &.text-justify {
-    text-align: justify;
   }
 }
 
@@ -148,6 +105,6 @@ section {
   flex-direction: column;
 
   &:nth-child(even) {
-    background-color: var(--clr-secondary);
+    background-color: var(--color-secondary);
   }
 }

@@ -9,13 +9,17 @@ export default function Home() {
   return (
     <main className="justify-center">
       <div className="section-container">
-        <section className="align-center size-small text-center">
-          <h1>Darwin Billiano</h1>
-          <p>Hi! I&apos;m a hobbyist programmer</p>
+        <section className="self-center text-center">
+          <div>
+            <h1 className="text-4xl">Darwin Billiano</h1>
+            <br />
+            <p className="text-2xl">Software, Game, and Full-stack Developer</p>
+          </div>
           <br />
-          <hr />
-          <Link className="button" href="/about">
-            Learn more
+          <br />
+          <br />
+          <Link className="btn" href="/about">
+            Learn More
           </Link>
         </section>
       </div>
