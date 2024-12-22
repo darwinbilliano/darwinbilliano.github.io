@@ -1,8 +1,8 @@
 import Footer from "@/components/footer";
 import Header from "@/components/header";
-import type { HTMLProps } from "react";
+import type { ReactNode } from "react";
 
-export default function DefaultLayout({ children }: HTMLProps<HTMLDivElement>) {
+export default function DefaultLayout({ children }: { children: ReactNode }) {
   return (
     <>
       <Header />

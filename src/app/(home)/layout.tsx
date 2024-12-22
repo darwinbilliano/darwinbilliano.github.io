@@ -1,7 +1,7 @@
 import Header from "@/components/header";
-import type { HTMLProps } from "react";
+import type { ReactNode } from "react";
 
-export default function HomeLayout({ children }: HTMLProps<HTMLDivElement>) {
+export default function HomeLayout({ children }: { children: ReactNode }) {
   return (
     <>
       <Header className="home" />
