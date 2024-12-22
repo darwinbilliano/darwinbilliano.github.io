@@ -1,4 +1,6 @@
-/* backgrounds 8 */
+/* BACKGROUNDS */
+
+/* background-color */
 
 .bg-slate-100 {
   background-color: var(--color-slate-100);
@@ -8,11 +10,15 @@
   background-color: var(--color-slate-200);
 }
 
-/* box alignment */
+/* BOX ALIGNMENT */
+
+/* justify-content */
 
 .justify-center {
   justify-content: center;
 }
+
+/* justify-content */
 
 .self-center {
   align-self: center;
@@ -22,7 +28,9 @@
   align-self: flex-end;
 }
 
-/* typography */
+/* TYPOGRAPHY */
+
+/* font-size */
 
 .font-normal {
   font-weight: normal;
@@ -31,6 +39,8 @@
 .font-bold {
   font-weight: bold;
 }
+
+/* font-size */
 
 .text-base {
   font-size: 1rem;
@@ -56,6 +66,22 @@
   font-size: 2.25rem;
 }
 
+/* list-style-type */
+
+.list-none {
+  list-style: none;
+}
+
+.list-disc {
+  list-style: disc;
+}
+
+.list-decimal {
+  list-style: decimal;
+}
+
+/* text-align */
+
 .text-left {
   text-align: left;
 }
@@ -72,16 +98,28 @@
   text-align: justify;
 }
 
+/* text-decoration */
+
 .no-decoration {
   text-decoration: none;
+}
+
+.line-through {
+  text-decoration: line-through;
 }
 
 .underline {
   text-decoration: underline;
 }
 
+/* text-transform */
+
 .normal-case {
   text-transform: none;
+}
+
+.capitalize {
+  text-transform: capitalize;
 }
 
 .lowercase {

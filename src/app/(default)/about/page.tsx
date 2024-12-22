@@ -38,19 +38,19 @@ export default function About() {
       <div className="section-container bg-slate-200">
         <section className="section-medium self-center">
           <h1 className="font-bold text-2xl">Skills</h1>
-          <ul>
+          <ul className="list-disc">
             <li>C#</li>
             <li>Avalonia UI</li>
           </ul>
-          <ul>
+          <ul className="list-disc">
             <li>ASP.NET Core</li>
             <li>Next.js (you&apos;re looking at it rn)</li>
           </ul>
-          <ul>
+          <ul className="list-disc">
             <li>Godot</li>
             <li>Unity</li>
           </ul>
-          <ul>
+          <ul className="list-disc">
             <li>Git</li>
             <li>Ubuntu</li>
             <li>Arch Linux (I use arch btw)</li>
