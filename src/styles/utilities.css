@@ -1,4 +1,18 @@
+/* backgrounds 8 */
+
+.bg-slate-100 {
+  background-color: var(--color-slate-100);
+}
+
+.bg-slate-200 {
+  background-color: var(--color-slate-200);
+}
+
 /* box alignment */
+
+.justify-center {
+  justify-content: center;
+}
 
 .self-center {
   align-self: center;
@@ -22,8 +36,20 @@
   font-size: 1rem;
 }
 
+.text-lg {
+  font-size: 1.125rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+}
+
 .text-2xl {
   font-size: 1.5rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
 }
 
 .text-4xl {
@@ -54,12 +80,12 @@
   text-decoration: underline;
 }
 
-.lowercase {
-  text-transform: lowercase;
-}
-
 .normal-case {
   text-transform: none;
+}
+
+.lowercase {
+  text-transform: lowercase;
 }
 
 .uppercase {

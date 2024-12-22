@@ -35,7 +35,7 @@ export default function About() {
           </p>
         </section>
       </div>
-      <div className="section-container">
+      <div className="section-container bg-slate-200">
         <section className="section-medium self-center">
           <h1 className="font-bold text-2xl">Skills</h1>
           <ul>
