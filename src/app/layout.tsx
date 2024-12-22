@@ -14,7 +14,9 @@ const nunito = Nunito_Sans({
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html className={nunito.className}>
-      <body>{children}</body>
+      <body className="flex flex-col min-h-dvh bg-primary text-white">
+        {children}
+      </body>
     </html>
   );
 }

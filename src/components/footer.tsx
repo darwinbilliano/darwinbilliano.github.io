@@ -3,8 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Footer() {
   return (
-    <footer>
-      <div>
+    <footer className="p-8 text-center">
+      <div className="flex justify-center">
         <a href="https://github.com/darwinbilliano">
           <FontAwesomeIcon className="fa-xl" icon={faGithub} />
         </a>
