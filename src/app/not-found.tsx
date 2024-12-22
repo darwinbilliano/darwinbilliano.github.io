@@ -1,3 +1,4 @@
+import Footer from "@/components/footer";
 import Header from "@/components/header";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -10,7 +11,7 @@ export default function NotFound() {
   return (
     <>
       <Header />
-      <main className="justify-center">
+      <main>
         <div className="section-container">
           <section className="section-small self-center text-center">
             <h1 className="font-bold text-2xl">Not Found</h1>
@@ -22,6 +23,7 @@ export default function NotFound() {
           </section>
         </div>
       </main>
+      <Footer />
     </>
   );
 }

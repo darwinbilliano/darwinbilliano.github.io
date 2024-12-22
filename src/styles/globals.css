@@ -47,7 +47,7 @@ nav {
   padding-inline: 3rem;
 
   h1 {
-    font-size: 140%;
+    font-size: 1.4rem;
   }
 
   li {
@@ -62,8 +62,13 @@ nav {
 }
 
 footer {
-  padding: 1rem;
+  padding: 2rem;
   text-align: center;
+
+  div {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 main {

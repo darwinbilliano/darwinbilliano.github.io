@@ -11,15 +11,14 @@ export default function Home() {
       <div className="section-container">
         <section className="self-center text-center">
           <div>
-            <h1 className="text-4xl">Darwin Billiano</h1>
+            <h1 className="text-3xl">Darwin Billiano</h1>
             <br />
             <p className="text-2xl">Software, Game, and Full-stack Developer</p>
           </div>
           <br />
           <br />
-          <br />
           <Link className="btn" href="/about">
-            Learn More
+            About Me
           </Link>
         </section>
       </div>
