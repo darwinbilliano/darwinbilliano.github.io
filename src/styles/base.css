@@ -25,6 +25,7 @@ h6 {
   font-weight: inherit;
 }
 
-hr {
-  border-top-width: 1px;
+ol,
+ul {
+  list-style: none;
 }
