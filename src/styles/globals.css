@@ -4,6 +4,6 @@
 
 @layer components {
   .btn {
-    @apply inline-block px-6 py-2 rounded bg-accent hover:bg-accent-light;
+    @apply inline-block px-6 py-2 bg-accent hover:bg-accent-light rounded;
   }
 }
