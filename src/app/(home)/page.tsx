@@ -7,9 +7,9 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className="justify-center">
-      <div className="section-container">
-        <section className="self-center text-center">
+    <main className="flex flex-1 flex-col justify-center">
+      <div className="flex flex-col">
+        <section className="w-full px-12 py-8 self-center text-center">
           <div>
             <h1 className="text-3xl">Darwin Billiano</h1>
             <br />
