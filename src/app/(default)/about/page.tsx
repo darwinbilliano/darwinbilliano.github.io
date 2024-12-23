@@ -6,9 +6,9 @@ export const metadata: Metadata = {
 
 export default function About() {
   return (
-    <main>
-      <div className="section-container">
-        <section className="section-medium self-center text-justify">
+    <main className="flex flex-col">
+      <div className="flex flex-col">
+        <section className="w-full max-w-2xl self-center px-12 py-8 text-justify">
           <h1 className="font-bold text-2xl">
             Hey there! I&apos;m Darwin Billiano
           </h1>
@@ -35,8 +35,8 @@ export default function About() {
           </p>
         </section>
       </div>
-      <div className="section-container bg-slate-200">
-        <section className="section-medium self-center">
+      <div className="flex flex-col bg-primary-light">
+        <section className="w-full max-w-2xl self-center px-12 py-8">
           <h1 className="font-bold text-2xl">Skills</h1>
           <ul className="list-disc">
             <li>C#</li>
