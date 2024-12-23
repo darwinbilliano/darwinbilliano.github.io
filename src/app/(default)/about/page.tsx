@@ -6,9 +6,9 @@ export const metadata: Metadata = {
 
 export default function About() {
   return (
-    <main className="flex flex-col">
-      <div className="flex flex-col">
-        <section className="w-full max-w-2xl self-center px-12 py-8 text-justify">
+    <main className="flex flex-1 flex-col">
+      <div className="flex flex-col items-center">
+        <section className="w-full max-w-2xl px-12 py-8 text-justify">
           <h1 className="font-bold text-2xl">
             Hey there! I&apos;m Darwin Billiano
           </h1>
@@ -35,26 +35,35 @@ export default function About() {
           </p>
         </section>
       </div>
-      <div className="flex flex-col bg-primary-light">
-        <section className="w-full max-w-2xl self-center px-12 py-8">
+      <div className="flex flex-col items-center bg-primary-light">
+        <section className="w-full max-w-2xl px-12 py-8">
           <h1 className="font-bold text-2xl">Skills</h1>
-          <ul className="list-disc">
-            <li>C#</li>
-            <li>Avalonia UI</li>
-          </ul>
-          <ul className="list-disc">
-            <li>ASP.NET Core</li>
-            <li>Next.js (you&apos;re looking at it rn)</li>
-          </ul>
-          <ul className="list-disc">
-            <li>Godot</li>
-            <li>Unity</li>
-          </ul>
-          <ul className="list-disc">
-            <li>Git</li>
-            <li>Ubuntu</li>
-            <li>Arch Linux (I use arch btw)</li>
-          </ul>
+          <br />
+          <div className="flex justify-between gap-4 max-sm:flex-col">
+            <div>
+              <h2 className="font-bold">Software Dev</h2>
+              <ul className="list-disc list-inside">
+                <li>C#</li>
+                <li>Avalonia UI</li>
+              </ul>
+            </div>
+            <div>
+              <h2 className="font-bold">Full-stack Dev</h2>
+              <ul className="list-disc list-inside">
+                <li>ASP.NET Core</li>
+                <li>Next.js</li>
+                <li>Tailwind CSS</li>
+              </ul>
+            </div>
+            <div>
+              <h2 className="font-bold">Dev Tools</h2>
+              <ul className="list-disc list-inside">
+                <li>Docker</li>
+                <li>Git</li>
+                <li>Linux</li>
+              </ul>
+            </div>
+          </div>
         </section>
       </div>
     </main>
