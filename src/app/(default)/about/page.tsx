@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { HTMLProps } from "react";
 
 export const metadata: Metadata = {
@@ -37,33 +38,68 @@ export default function About() {
         </section>
       </div>
       <div className="flex flex-col items-center bg-slate-light">
-        <section className="w-full max-w-2xl px-12 py-8">
+        <section className="w-full max-w-3xl px-12 py-8">
           <h1 className="font-bold text-2xl text-center">Skills</h1>
           <br />
           <div className="flex justify-between gap-4 max-sm:flex-col">
-            <SkillGroup>
+            <SkillNode>
               <h2 className="font-bold">Software Dev</h2>
               <ul className="list-disc list-inside">
                 <li>C#</li>
                 <li>Avalonia UI</li>
               </ul>
-            </SkillGroup>
-            <SkillGroup>
+            </SkillNode>
+            <SkillNode>
               <h2 className="font-bold">Full-stack Dev</h2>
               <ul className="list-disc list-inside">
                 <li>ASP.NET Core</li>
                 <li>Next.js</li>
                 <li>Tailwind CSS</li>
               </ul>
-            </SkillGroup>
-            <SkillGroup>
+            </SkillNode>
+            <SkillNode>
               <h2 className="font-bold">Dev Tools</h2>
               <ul className="list-disc list-inside">
                 <li>Docker</li>
                 <li>Git</li>
                 <li>Linux</li>
               </ul>
-            </SkillGroup>
+            </SkillNode>
+          </div>
+        </section>
+      </div>
+      <div className="flex flex-col items-center">
+        <section className="w-full max-w-2xl px-12 py-8">
+          <h1 className="font-bold text-2xl text-center">Projects</h1>
+          <br />
+          <div className="flex justify-between gap-4 max-sm:flex-col">
+            <ProjectNode>
+              <h2 className="font-bold">Software</h2>
+              <ul className="list-disc list-inside">
+                <li>
+                  <Link
+                    className="underline"
+                    href="https://github.com/darwinbilliano/BiLink"
+                  >
+                    BiLink
+                  </Link>
+                </li>
+                <li>MechSharp</li>
+              </ul>
+            </ProjectNode>
+            <ProjectNode>
+              <h2 className="font-bold">Full-stack</h2>
+              <ul className="list-disc list-inside">
+                <li>
+                  <Link
+                    className="underline"
+                    href="https://github.com/darwinbilliano/darwinbilliano.github.io"
+                  >
+                    darwinbilliano.github.io
+                  </Link>
+                </li>
+              </ul>
+            </ProjectNode>
           </div>
         </section>
       </div>
@@ -71,10 +107,16 @@ export default function About() {
   );
 }
 
-function SkillGroup({ children }: Pick<HTMLProps<HTMLDivElement>, "children">) {
+function SkillNode({ children }: Pick<HTMLProps<HTMLDivElement>, "children">) {
   return (
-    <div className="p-8 bg-red rounded duration-100 hover:scale-105">
+    <div className="flex-1 p-8 bg-red rounded duration-100 hover:scale-105">
       {children}
     </div>
   );
+}
+
+function ProjectNode({
+  children,
+}: Pick<HTMLProps<HTMLDivElement>, "children">) {
+  return <div className="flex-1 p-8 bg-red rounded">{children}</div>;
 }

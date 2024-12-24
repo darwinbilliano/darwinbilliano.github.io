@@ -1,4 +1,8 @@
+"use client";
+
+import classNames from "classnames";
 import Link, { type LinkProps } from "next/link";
+import { usePathname } from "next/navigation";
 import type { HTMLProps } from "react";
 
 export default function Header({
@@ -25,8 +29,12 @@ function NavLink({
   children,
   href,
 }: Pick<LinkProps, "href"> & Pick<HTMLProps<HTMLAnchorElement>, "children">) {
+  const path = usePathname();
+  const className = classNames("inline-block px-8 py-4 hover:underline", {
+    underline: path === href,
+  });
   return (
-    <Link className="inline-block px-8 py-4 hover:underline" href={href}>
+    <Link className={className} href={href}>
       {children}
     </Link>
   );
