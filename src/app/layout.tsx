@@ -5,14 +5,15 @@ import type { HTMLProps } from "react";
 
 const nunito = Nunito_Sans({
   subsets: ["latin"],
+  variable: "--font-nunito",
 });
 
 export default function RootLayout({
   children,
 }: Pick<HTMLProps<HTMLDivElement>, "children">) {
   return (
-    <html className={nunito.className}>
-      <body className="flex flex-col min-h-dvh bg-primary text-white">
+    <html className={nunito.variable}>
+      <body className="flex flex-col min-h-dvh bg-slate text-white">
         {children}
       </body>
     </html>

@@ -35,7 +35,7 @@ export default function About() {
           </p>
         </section>
       </div>
-      <div className="flex flex-col items-center bg-primary-light">
+      <div className="flex flex-col items-center bg-slate-light">
         <section className="w-full max-w-2xl px-12 py-8">
           <h1 className="font-bold text-2xl">Skills</h1>
           <br />
