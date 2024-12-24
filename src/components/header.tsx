@@ -4,7 +4,7 @@ import type { HTMLProps } from "react";
 export default function Header({
   className,
 }: Pick<HTMLProps<HTMLDivElement>, "className">) {
-  className ??= "sticky top-0 font-bold bg-accent border-b";
+  className ??= "sticky top-0 font-bold bg-red border-b";
   return (
     <header className={className}>
       <nav className="flex items-center justify-between px-12">
