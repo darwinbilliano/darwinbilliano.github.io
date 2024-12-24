@@ -8,7 +8,7 @@ export default function Header({
   return (
     <header className={className}>
       <nav className="flex items-center justify-between px-12">
-        <h1 className="text-[1.4rem]">
+        <h1 className="text-xl">
           <Link href="/">@billiano</Link>
         </h1>
         <ul>

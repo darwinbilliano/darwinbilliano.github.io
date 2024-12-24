@@ -24,6 +24,7 @@ const config: Config = {
     },
     fontFamily: {
       sans: "var(--font-nunito)",
+      display: "var(--font-raleway)",
     },
   },
 };
