@@ -17,9 +17,9 @@ const raleway = Raleway({
 export default function RootLayout({
   children,
 }: Pick<HTMLProps<HTMLDivElement>, "children">) {
-  const fonts = classNames(nunito.variable, raleway.variable);
+  const className = classNames(nunito.variable, raleway.variable);
   return (
-    <html className={fonts}>
+    <html className={className}>
       <body className="flex flex-col min-h-dvh bg-slate text-white">
         {children}
       </body>
