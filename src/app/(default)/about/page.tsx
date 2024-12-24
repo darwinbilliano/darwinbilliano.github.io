@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { HTMLProps } from "react";
 
 export const metadata: Metadata = {
   title: "About Me",
@@ -37,35 +38,43 @@ export default function About() {
       </div>
       <div className="flex flex-col items-center bg-slate-light">
         <section className="w-full max-w-2xl px-12 py-8">
-          <h1 className="font-bold text-2xl">Skills</h1>
+          <h1 className="font-bold text-2xl text-center">Skills</h1>
           <br />
           <div className="flex justify-between gap-4 max-sm:flex-col">
-            <div>
+            <SkillGroup>
               <h2 className="font-bold">Software Dev</h2>
               <ul className="list-disc list-inside">
                 <li>C#</li>
                 <li>Avalonia UI</li>
               </ul>
-            </div>
-            <div>
+            </SkillGroup>
+            <SkillGroup>
               <h2 className="font-bold">Full-stack Dev</h2>
               <ul className="list-disc list-inside">
                 <li>ASP.NET Core</li>
                 <li>Next.js</li>
                 <li>Tailwind CSS</li>
               </ul>
-            </div>
-            <div>
+            </SkillGroup>
+            <SkillGroup>
               <h2 className="font-bold">Dev Tools</h2>
               <ul className="list-disc list-inside">
                 <li>Docker</li>
                 <li>Git</li>
                 <li>Linux</li>
               </ul>
-            </div>
+            </SkillGroup>
           </div>
         </section>
       </div>
     </main>
+  );
+}
+
+function SkillGroup({ children }: Pick<HTMLProps<HTMLDivElement>, "children">) {
+  return (
+    <div className="p-8 bg-red rounded duration-100 hover:scale-105">
+      {children}
+    </div>
   );
 }
