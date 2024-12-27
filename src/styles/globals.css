@@ -2,8 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  main {
+    @apply flex flex-1 flex-col;
+  }
+
+  section {
+    @apply px-12 py-8;
+  }
+}
+
 @layer components {
-  .btn {
-    @apply inline-block px-6 py-2 bg-red hover:bg-red-light rounded;
+  a {
+    &.btn {
+      @apply inline-block px-6 py-2 bg-red hover:bg-red-light rounded shadow;
+    }
+  }
+
+  div {
+    &.section-container {
+      &.section-container-center {
+        @apply flex flex-col items-center;
+      }
+    }
+  }
+
+  section {
+    &.section-w-lg {
+      @apply w-full max-w-lg;
+    }
+
+    &.section-w-2xl {
+      @apply w-full max-w-2xl;
+    }
+
+    &.section-w-3xl {
+      @apply w-full max-w-3xl;
+    }
   }
 }

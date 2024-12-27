@@ -11,8 +11,8 @@ export default function NotFound() {
   return (
     <>
       <Header />
-      <main className="flex flex-1 flex-col items-center">
-        <section className="max-w-lg px-12 py-8 text-center">
+      <main className="items-center">
+        <section className="section-w-lg text-center">
           <h1 className="font-bold text-2xl">Not Found</h1>
           <p>It looks like you&apos;re lost, here&apos;s the way back</p>
           <br />
