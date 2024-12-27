@@ -19,7 +19,10 @@ const config: Config = {
     },
     extend: {
       borderColor: {
-        DEFAULT: "hsla(0, 0%, 100%, 30%)",
+        DEFAULT: "hsla(0, 0%, 100%, 10%)",
+      },
+      boxShadow: {
+        DEFAULT: "0 0 1px 2px hsla(0, 0%, 100%, 10%)",
       },
     },
     fontFamily: {

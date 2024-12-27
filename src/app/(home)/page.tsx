@@ -7,12 +7,14 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className="items-center justify-center">
+    <main className="justify-center">
       <section className="text-center">
         <div className="font-display tracking-widest">
-          <h1 className="text-3xl">Darwin Billiano</h1>
+          <h1 className="font-bold text-3xl">Darwin Billiano</h1>
           <br />
-          <p className="text-2xl">Software, Game, and Full-stack Developer</p>
+          <p className="font-bold text-2xl">
+            Software and Full-stack Developer
+          </p>
         </div>
         <br />
         <br />

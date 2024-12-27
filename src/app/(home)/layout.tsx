@@ -6,7 +6,7 @@ export default function HomeLayout({
 }: Pick<HTMLProps<HTMLDivElement>, "children">) {
   return (
     <>
-      <Header className="fixed w-full font-bold" />
+      <Header className="fixed w-full bg-slate" />
       {children}
     </>
   );

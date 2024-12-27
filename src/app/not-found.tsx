@@ -12,7 +12,7 @@ export default function NotFound() {
     <>
       <Header />
       <main className="items-center">
-        <section className="section-w-lg text-center">
+        <section className="text-center">
           <h1 className="font-bold text-2xl">Not Found</h1>
           <p>It looks like you&apos;re lost, here&apos;s the way back</p>
           <br />

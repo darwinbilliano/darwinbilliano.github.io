@@ -28,16 +28,8 @@
   }
 
   section {
-    &.section-w-lg {
-      @apply w-full max-w-lg;
-    }
-
     &.section-w-2xl {
       @apply w-full max-w-2xl;
-    }
-
-    &.section-w-3xl {
-      @apply w-full max-w-3xl;
     }
   }
 }
