@@ -30,7 +30,7 @@ export default function ArticlePage() {
           </div>
           <br />
           <div>
-            <h2 className="font-bold">Middle School (2020-2022)</h2>
+            <h2 className="font-bold">Middle School (2021-2023)</h2>
             <p>
               I started with simple top-down shooter game I made using Java.
               From there, I got into Unity and C#, which has since become my
@@ -55,7 +55,7 @@ export default function ArticlePage() {
           </div>
           <br />
           <div>
-            <h2 className="font-bold">High School (2022-2026)</h2>
+            <h2 className="font-bold">High School (2023-2026)</h2>
             <p>
               New programming languages: C, C++, Rust and Go. New technologies:
               Next.js, React, Tailwind, Docker, and Linux. Other: Telegram bot
