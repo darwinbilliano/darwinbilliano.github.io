@@ -1,92 +1,67 @@
 import type { Metadata } from "next";
-import Link, { type LinkProps } from "next/link";
-import type { HTMLProps } from "react";
+import Link from "next/link";
+
+const projects = [
+  {
+    href: "https://github.com/darwinbilliano/BiLink",
+    title: "BiLink",
+    description: "CLI tool that manages Symbolic Link",
+    tags: ["C#", "CLI", "Software"],
+  },
+  {
+    href: "https://github.com/darwinbilliano/MechSharp",
+    title: "MechSharp",
+    description:
+      "Recreation of Mechvibes, simulate mechanical keyboard keypress",
+    tags: ["C#", "GUI", "Software"],
+  },
+  {
+    href: "https://github.com/darwinbilliano/darwinbilliano.github.io",
+    title: "Portfolio",
+    description: "This website",
+    tags: ["TypeScript", "Front-end"],
+  },
+];
 
 export const metadata: Metadata = {
   title: "Portfolio",
 };
 
-export default function Portfolio() {
+export default function PortfolioPage() {
   return (
     <main className="items-center">
       <section className="section-w-6xl">
-        <div className="grid grid-cols-[repeat(auto-fill,minmax(20rem,1fr))] gap-8">
-          <ProjectNode href="https://github.com/darwinbilliano/BiLink">
-            <div>
-              <h2 className="font-bold">BiLink</h2>
-              <p>CLI tool that manages Symbolic Link</p>
-            </div>
-            <br />
-            <div className="flex flex-1 items-end">
-              <ul className="flex flex-wrap gap-2">
-                <li>
-                  <TagNode>C#</TagNode>
-                </li>
-                <li>
-                  <TagNode>CLI</TagNode>
-                </li>
-                <li>
-                  <TagNode>Software</TagNode>
-                </li>
-              </ul>
-            </div>
-          </ProjectNode>
-          <ProjectNode href="https://github.com/darwinbilliano/MechSharp">
-            <div>
-              <h2 className="font-bold">MechSharp</h2>
-              <p>
-                Recreation of Mechvibes, simulate mechanical keyboard keypress
-              </p>
-            </div>
-            <br />
-            <div className="flex flex-1 items-end">
-              <ul className="flex flex-wrap gap-2">
-                <li>
-                  <TagNode>C#</TagNode>
-                </li>
-                <li>
-                  <TagNode>GUI</TagNode>
-                </li>
-                <li>
-                  <TagNode>Software</TagNode>
-                </li>
-              </ul>
-            </div>
-          </ProjectNode>
-          <ProjectNode href="https://github.com/darwinbilliano/darwinbilliano.github.io">
-            <div>
-              <h2 className="font-bold">Portfolio</h2>
-              <p>This website</p>
-            </div>
-            <br />
-            <div className="flex flex-1 items-end">
-              <ul className="flex flex-wrap">
-                <li>
-                  <TagNode>TypeScript</TagNode>
-                </li>
-                <li>
-                  <TagNode>Front-end</TagNode>
-                </li>
-              </ul>
-            </div>
-          </ProjectNode>
-        </div>
+        <Projects />
       </section>
     </main>
   );
 }
 
-function ProjectNode({
-  children,
-  href,
-}: Pick<HTMLProps<HTMLDivElement>, "children"> & Pick<LinkProps, "href">) {
+function Projects() {
   return (
-    <Link className="flex flex-col p-8 bg-red rounded shadow" href={href}>
-      {children}
-    </Link>
+    <ul className="grid grid-cols-[repeat(auto-fill,minmax(20rem,1fr))] gap-8">
+      {projects.map(({ title, description, tags, href }) => (
+        <li key={href}>
+          <Link className="h-full" href={href}>
+            <div className="flex flex-col h-full p-8 bg-red rounded shadow">
+              <h2 className="font-bold">{title}</h2>
+              <p>{description}</p>
+              <br />
+              <div className="flex flex-1 items-end">
+                <ul className="flex flex-wrap gap-1">
+                  {tags.map((tag) => (
+                    <li key={tag}>
+                      <span className="p-1 text-xs bg-red-light rounded">
+                        {tag}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </Link>
+        </li>
+      ))}
+    </ul>
   );
-}
-
-function TagNode({ children }: Pick<HTMLProps<HTMLDivElement>, "children">) {
-  return <span className="p-1 text-xs bg-red-light rounded">{children}</span>;
 }

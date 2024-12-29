@@ -1,12 +1,26 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import type { HTMLProps } from "react";
+
+const links = [
+  {
+    href: "/about/skills",
+    text: "Skills",
+  },
+  {
+    href: "/portfolio",
+    text: "Portfolio",
+  },
+  {
+    href: "/articles",
+    text: "Articles",
+  },
+];
 
 export const metadata: Metadata = {
   title: "About Me",
 };
 
-export default function About() {
+export default function AboutPage() {
   return (
     <main>
       <div className="section-container section-container-center">
@@ -25,33 +39,25 @@ export default function About() {
         <section className="section-w-2xl">
           <h1 className="font-bold text-2xl text-center">More About Me</h1>
           <br />
-          <div className="flex max-sm:flex-col gap-4">
-            <Link className="flex-grow" href="/about/skills">
-              <AboutNode>
-                <h2 className="font-bold text-center">Skills</h2>
-              </AboutNode>
-            </Link>
-            <Link className="flex-grow" href="/portfolio">
-              <AboutNode>
-                <h2 className="font-bold text-center">Portfolio</h2>
-              </AboutNode>
-            </Link>
-            <Link className="flex-grow" href="/articles">
-              <AboutNode>
-                <h2 className="font-bold text-center">Articles</h2>
-              </AboutNode>
-            </Link>
-          </div>
+          <Links />
         </section>
       </div>
     </main>
   );
 }
 
-function AboutNode({ children }: Pick<HTMLProps<HTMLDivElement>, "children">) {
+function Links() {
   return (
-    <div className="p-4 bg-red hover:bg-red-light rounded shadow duration-200">
-      {children}
-    </div>
+    <ul className="flex max-sm:flex-col gap-4">
+      {links.map(({ href, text }) => (
+        <li className="flex-grow" key={href}>
+          <Link href={href}>
+            <div className="p-4 bg-red hover:bg-red-light rounded shadow">
+              <h2 className="font-bold text-center">{text}</h2>
+            </div>
+          </Link>
+        </li>
+      ))}
+    </ul>
   );
 }

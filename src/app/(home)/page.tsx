@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Home",
 };
 
-export default function Home() {
+export default function HomePage() {
   return (
     <main className="justify-center">
       <section className="text-center">

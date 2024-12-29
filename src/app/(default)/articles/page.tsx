@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: "Articles",
 };
 
-export default function Articles() {
+export default function ArticlesPage() {
   return (
     <main>
       <div className="section-container section-container-center">

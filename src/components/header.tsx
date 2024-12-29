@@ -2,10 +2,18 @@
 
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import classNames from "classnames";
-import Link, { type LinkProps } from "next/link";
-import { usePathname } from "next/navigation";
+import Link from "next/link";
 import type { HTMLProps } from "react";
+
+const navLinks = [
+  { href: "/about", text: "About Me" },
+  { href: "/portfolio", text: "Portfolio" },
+  { href: "/articles", text: "Articles" },
+];
+
+const socialLinks = [
+  { href: "https://github.com/darwinbilliano", icon: faGithub },
+];
 
 export default function Header({
   className,
@@ -18,41 +26,38 @@ export default function Header({
           <Link href="/">@billiano</Link>
         </h1>
         <div className="flex items-center gap-8">
-          <ul>
-            <li className="inline-block">
-              <NavLink href="/about">About Me</NavLink>
-            </li>
-            <li className="inline-block">
-              <NavLink href="/portfolio">Portfolio</NavLink>
-            </li>
-            <li className="inline-block">
-              <NavLink href="/articles">Articles</NavLink>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <Link href="https://github.com/darwinbilliano">
-                <FontAwesomeIcon className="fa-xl" icon={faGithub} />
-              </Link>
-            </li>
-          </ul>
+          <NavLinks />
+          <SocialLinks />
         </div>
       </nav>
     </header>
   );
 }
 
-function NavLink({
-  children,
-  href,
-}: Pick<HTMLProps<HTMLAnchorElement>, "children"> & Pick<LinkProps, "href">) {
-  const path = usePathname();
-  const className = classNames("inline-block px-6 py-4 hover:underline", {
-    underline: path === href,
-  });
+function NavLinks() {
   return (
-    <Link className={className} href={href}>
-      {children}
-    </Link>
+    <ul>
+      {navLinks.map(({ href, text }) => (
+        <li className="inline-block" key={href}>
+          <Link className="inline-block px-6 py-4 hover:underline" href={href}>
+            {text}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+function SocialLinks() {
+  return (
+    <ul>
+      {socialLinks.map(({ href, icon }) => (
+        <li className="inline-block" key={href}>
+          <Link href={href}>
+            <FontAwesomeIcon className="fa-xl" icon={icon} />
+          </Link>
+        </li>
+      ))}
+    </ul>
   );
 }
