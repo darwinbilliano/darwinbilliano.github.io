@@ -1,19 +1,10 @@
 "use client";
 
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { NavLinks } from "@/client/header";
+import { socialLinks } from "@/content/header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import type { HTMLProps } from "react";
-
-const navLinks = [
-  { href: "/about", text: "About Me" },
-  { href: "/portfolio", text: "Portfolio" },
-  { href: "/articles", text: "Articles" },
-];
-
-const socialLinks = [
-  { href: "https://github.com/darwinbilliano", icon: faGithub },
-];
 
 export default function Header({
   className,
@@ -31,20 +22,6 @@ export default function Header({
         </div>
       </nav>
     </header>
-  );
-}
-
-function NavLinks() {
-  return (
-    <ul>
-      {navLinks.map(({ href, text }) => (
-        <li className="inline-block" key={href}>
-          <Link className="inline-block px-6 py-4 hover:underline" href={href}>
-            {text}
-          </Link>
-        </li>
-      ))}
-    </ul>
   );
 }
 

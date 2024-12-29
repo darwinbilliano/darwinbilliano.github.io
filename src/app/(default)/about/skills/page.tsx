@@ -1,19 +1,5 @@
+import { skills } from "@/content/skills";
 import type { Metadata } from "next";
-
-const skills = [
-  {
-    title: "Software Dev",
-    skills: ["C#", "Avalonia UI"],
-  },
-  {
-    title: "Full-stack Dev",
-    skills: ["ASP.NET Core", "Next.js", "Tailwind CSS"],
-  },
-  {
-    title: "Dev Tools",
-    skills: ["Docker", "Git", "Linux"],
-  },
-];
 
 export const metadata: Metadata = {
   title: "Skills",

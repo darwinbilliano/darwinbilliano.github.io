@@ -1,27 +1,6 @@
+import { projects } from "@/content/portfolio";
 import type { Metadata } from "next";
 import Link from "next/link";
-
-const projects = [
-  {
-    href: "https://github.com/darwinbilliano/BiLink",
-    title: "BiLink",
-    description: "CLI tool that manages Symbolic Link",
-    tags: ["C#", "CLI", "Software"],
-  },
-  {
-    href: "https://github.com/darwinbilliano/MechSharp",
-    title: "MechSharp",
-    description:
-      "Recreation of Mechvibes, simulate mechanical keyboard keypress",
-    tags: ["C#", "GUI", "Software"],
-  },
-  {
-    href: "https://github.com/darwinbilliano/darwinbilliano.github.io",
-    title: "Portfolio",
-    description: "This website",
-    tags: ["TypeScript", "Front-end"],
-  },
-];
 
 export const metadata: Metadata = {
   title: "Portfolio",

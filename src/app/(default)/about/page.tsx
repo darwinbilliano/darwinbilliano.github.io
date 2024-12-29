@@ -1,20 +1,6 @@
+import { links } from "@/content/about";
 import type { Metadata } from "next";
 import Link from "next/link";
-
-const links = [
-  {
-    href: "/about/skills",
-    text: "Skills",
-  },
-  {
-    href: "/portfolio",
-    text: "Portfolio",
-  },
-  {
-    href: "/articles",
-    text: "Articles",
-  },
-];
 
 export const metadata: Metadata = {
   title: "About Me",
