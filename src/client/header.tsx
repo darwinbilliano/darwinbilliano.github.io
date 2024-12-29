@@ -10,7 +10,7 @@ export function NavLinks() {
   return (
     <ul>
       {navLinks.map(({ href, text }) => {
-        const className = classNames("inline-block px-6 py-4 hover:underline", {
+        const className = classNames("inline-block px-6 py-2 hover:underline", {
           underline: path === href,
         });
         return (
