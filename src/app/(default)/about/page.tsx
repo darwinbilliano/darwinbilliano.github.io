@@ -13,7 +13,7 @@ export default function About() {
         <section className="section-w-2xl">
           <h1 className="font-bold text-2xl text-center">About Me</h1>
           <br />
-          <div className="p-8 bg-red rounded shadow">
+          <div className="text-justify">
             Hi! My name&apos;s Darwin Billiano. I&apos;m a high school student
             that love tech. I learn how to program since I was 12 years old. I
             love to learn new things and I&apos;m always curious about how
@@ -50,7 +50,7 @@ export default function About() {
 
 function AboutNode({ children }: Pick<HTMLProps<HTMLDivElement>, "children">) {
   return (
-    <div className="p-8 bg-red rounded shadow duration-100 hover:scale-105">
+    <div className="p-4 bg-red hover:bg-red-light rounded shadow duration-200">
       {children}
     </div>
   );

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link, { type LinkProps } from "next/link";
 import type { HTMLProps } from "react";
 
 export const metadata: Metadata = {
@@ -8,51 +8,85 @@ export const metadata: Metadata = {
 
 export default function Portfolio() {
   return (
-    <main>
-      <div className="section-container section-container-center">
-        <section className="section-w-2xl">
-          <h1 className="font-bold text-2xl text-center">Software</h1>
-          <br />
-          <div className="flex flex-col gap-4">
-            <Link href="https://github.com/darwinbilliano/BiLink">
-              <ProjectNode>
-                <h2 className="font-bold">BiLink</h2>
-                <p>CLI tool that manages Symbolic Link</p>
-              </ProjectNode>
-            </Link>
-            <ProjectNode>
-              <h2 className="font-bold">MechSharp (Private)</h2>
+    <main className="items-center">
+      <section className="section-w-6xl">
+        <div className="grid grid-cols-[repeat(auto-fill,minmax(20rem,1fr))] gap-8">
+          <ProjectNode href="https://github.com/darwinbilliano/BiLink">
+            <div>
+              <h2 className="font-bold">BiLink</h2>
+              <p>CLI tool that manages Symbolic Link</p>
+            </div>
+            <br />
+            <div className="flex flex-1 items-end">
+              <ul className="flex flex-wrap gap-2">
+                <li>
+                  <TagNode>C#</TagNode>
+                </li>
+                <li>
+                  <TagNode>CLI</TagNode>
+                </li>
+                <li>
+                  <TagNode>Software</TagNode>
+                </li>
+              </ul>
+            </div>
+          </ProjectNode>
+          <ProjectNode href="https://github.com/darwinbilliano/MechSharp">
+            <div>
+              <h2 className="font-bold">MechSharp</h2>
               <p>
                 Recreation of Mechvibes, simulate mechanical keyboard keypress
               </p>
-            </ProjectNode>
-          </div>
-        </section>
-      </div>
-      <div className="section-container section-container-center bg-slate-light">
-        <section className="section-w-2xl">
-          <h1 className="font-bold text-2xl text-center">Full-stack</h1>
-          <br />
-          <div className="flex flex-col gap-4">
-            <Link href="https://github.com/darwinbilliano/darwinbilliano.github.io">
-              <ProjectNode>
-                <h2 className="font-bold">Portfolio</h2>
-                <p>This website</p>
-              </ProjectNode>
-            </Link>
-          </div>
-        </section>
-      </div>
+            </div>
+            <br />
+            <div className="flex flex-1 items-end">
+              <ul className="flex flex-wrap gap-2">
+                <li>
+                  <TagNode>C#</TagNode>
+                </li>
+                <li>
+                  <TagNode>GUI</TagNode>
+                </li>
+                <li>
+                  <TagNode>Software</TagNode>
+                </li>
+              </ul>
+            </div>
+          </ProjectNode>
+          <ProjectNode href="https://github.com/darwinbilliano/darwinbilliano.github.io">
+            <div>
+              <h2 className="font-bold">Portfolio</h2>
+              <p>This website</p>
+            </div>
+            <br />
+            <div className="flex flex-1 items-end">
+              <ul className="flex flex-wrap">
+                <li>
+                  <TagNode>TypeScript</TagNode>
+                </li>
+                <li>
+                  <TagNode>Front-end</TagNode>
+                </li>
+              </ul>
+            </div>
+          </ProjectNode>
+        </div>
+      </section>
     </main>
   );
 }
 
 function ProjectNode({
   children,
-}: Pick<HTMLProps<HTMLDivElement>, "children">) {
+  href,
+}: Pick<HTMLProps<HTMLDivElement>, "children"> & Pick<LinkProps, "href">) {
   return (
-    <div className="flex-1 p-8 bg-red rounded shadow duration-500 hover:scale-105">
+    <Link className="flex flex-col p-8 bg-red rounded shadow" href={href}>
       {children}
-    </div>
+    </Link>
   );
+}
+
+function TagNode({ children }: Pick<HTMLProps<HTMLDivElement>, "children">) {
+  return <span className="p-1 text-xs bg-red-light rounded">{children}</span>;
 }

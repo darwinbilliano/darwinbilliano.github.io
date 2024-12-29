@@ -31,5 +31,9 @@
     &.section-w-2xl {
       @apply w-full max-w-2xl;
     }
+
+    &.section-w-6xl {
+      @apply w-full max-w-6xl;
+    }
   }
 }

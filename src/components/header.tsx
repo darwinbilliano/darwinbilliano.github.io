@@ -19,9 +19,15 @@ export default function Header({
         </h1>
         <div className="flex items-center gap-8">
           <ul>
-            <NavLink href="/about">About Me</NavLink>
-            <NavLink href="/portfolio">Portfolio</NavLink>
-            <NavLink href="/articles">Articles</NavLink>
+            <li className="inline-block">
+              <NavLink href="/about">About Me</NavLink>
+            </li>
+            <li className="inline-block">
+              <NavLink href="/portfolio">Portfolio</NavLink>
+            </li>
+            <li className="inline-block">
+              <NavLink href="/articles">Articles</NavLink>
+            </li>
           </ul>
           <ul>
             <li>
@@ -45,10 +51,8 @@ function NavLink({
     underline: path === href,
   });
   return (
-    <li className="inline-block">
-      <Link className={className} href={href}>
-        {children}
-      </Link>
-    </li>
+    <Link className={className} href={href}>
+      {children}
+    </Link>
   );
 }
