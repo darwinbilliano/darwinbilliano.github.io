@@ -21,7 +21,7 @@ export default function PortfolioPage() {
 function Projects() {
   return (
     <ul className="grid grid-cols-[repeat(auto-fill,minmax(20rem,1fr))] gap-8">
-      {projects.map(({ title, description, tags, href }) => (
+      {projects.map(({ href, title, description, tags }) => (
         <li key={href}>
           <Link className="h-full" href={href}>
             <div className="flex flex-col h-full p-8 bg-slate-light border rounded">
