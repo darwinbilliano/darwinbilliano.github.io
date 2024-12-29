@@ -2,7 +2,6 @@ import "@/styles/globals.css";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import classNames from "classnames";
 import { Nunito_Sans, Raleway } from "next/font/google";
-import type { HTMLProps } from "react";
 
 const nunito = Nunito_Sans({
   subsets: ["latin"],
@@ -16,7 +15,9 @@ const raleway = Raleway({
 
 export default function RootLayout({
   children,
-}: Pick<HTMLProps<HTMLDivElement>, "children">) {
+}: {
+  children: React.ReactNode;
+}) {
   const className = classNames(nunito.variable, raleway.variable);
   return (
     <html className={className}>

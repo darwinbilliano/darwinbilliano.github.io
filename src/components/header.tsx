@@ -4,11 +4,8 @@ import { NavLinks } from "@/client/header";
 import { socialLinks } from "@/content/header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
-import type { HTMLProps } from "react";
 
-export default function Header({
-  className,
-}: Pick<HTMLProps<HTMLDivElement>, "className">) {
+export default function Header({ className }: { className?: string }) {
   className ??= "sticky top-0 bg-red border-b";
   return (
     <header className={className}>
