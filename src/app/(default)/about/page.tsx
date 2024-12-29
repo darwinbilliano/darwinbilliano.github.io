@@ -38,8 +38,8 @@ function Links() {
       {links.map(({ href, text }) => (
         <li className="flex-grow" key={href}>
           <Link href={href}>
-            <div className="p-4 bg-red hover:bg-red-light rounded shadow">
-              <h2 className="font-bold text-center">{text}</h2>
+            <div className="p-4 bg-red hover:bg-red-light border border-light rounded">
+              <p className="font-bold text-center">{text}</p>
             </div>
           </Link>
         </li>

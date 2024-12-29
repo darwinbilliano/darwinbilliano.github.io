@@ -6,10 +6,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 
 export default function Header({ className }: { className?: string }) {
-  className ??= "sticky top-0 bg-red border-b";
+  className ??= "sticky top-0 bg-red border-b border-strong";
   return (
     <header className={className}>
-      <nav className="flex items-center justify-between px-32 max-md:px-12 font-bold">
+      <nav className="flex items-center justify-between px-12 md:px-32 font-bold">
         <h1 className="text-xl">
           <Link href="/">@billiano</Link>
         </h1>

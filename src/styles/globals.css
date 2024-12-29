@@ -8,14 +8,14 @@
   }
 
   section {
-    @apply px-12 py-8;
+    @apply p-12;
   }
 }
 
 @layer components {
   a {
     &.btn {
-      @apply inline-block px-6 py-2 bg-red hover:bg-red-light rounded shadow;
+      @apply inline-block px-6 py-2 bg-red hover:bg-red-light border border-light rounded;
     }
   }
 

@@ -9,12 +9,12 @@ export default function HomePage() {
   return (
     <main className="justify-center">
       <section className="text-center">
-        <div className="font-display tracking-widest">
-          <h1 className="font-bold text-3xl">Darwin Billiano</h1>
+        <div className="font-display font-semibold tracking-widest">
+          <h1 className="text-3xl md:text-5xl">Darwin Billiano</h1>
           <br />
-          <p className="font-bold text-2xl">
+          <h2 className="text-2xl md:text-4xl">
             Software and Full-stack Developer
-          </p>
+          </h2>
         </div>
         <br />
         <br />

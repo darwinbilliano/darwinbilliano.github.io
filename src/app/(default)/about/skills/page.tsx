@@ -9,8 +9,11 @@ export default function SkillsPage() {
   return (
     <main>
       <div className="section-container section-container-center">
-        <section className="section-w-2xl">
-          <h1 className="font-bold text-2xl text-center">Skills</h1>
+        <section className="section-w-6xl">
+          <div className="text-center">
+            <h1 className="font-bold text-2xl">Skills</h1>
+            <p>These are my key, frequently used skills</p>
+          </div>
           <br />
           <Skills />
         </section>
@@ -21,19 +24,16 @@ export default function SkillsPage() {
 
 function Skills() {
   return (
-    <ul className="flex flex-col gap-4">
-      {skills.map(({ title, skills }) => (
-        <li key={title}>
-          <div className="flex-grow p-8 bg-red rounded shadow">
-            <h2 className="font-bold">{title}</h2>
-            <ul className="list-disc list-inside">
-              {skills.map((skill) => (
-                <li key={skill}>{skill}</li>
-              ))}
-            </ul>
-          </div>
-        </li>
-      ))}
+    <ul className="grid grid-cols-[repeat(auto-fill,minmax(12rem,1fr))] gap-4">
+      {skills
+        .flatMap(({ skills }) => skills)
+        .map((skill) => (
+          <li key={skill}>
+            <div className="h-full p-4 bg-red border border-light rounded">
+              <p className="font-bold text-center">{skill}</p>
+            </div>
+          </li>
+        ))}
     </ul>
   );
 }
