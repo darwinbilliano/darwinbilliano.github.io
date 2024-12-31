@@ -1,9 +1,9 @@
 "use client";
 
-import { NavLinks } from "@/client/header";
 import { socialLinks } from "@/content/header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
+import { NavLinks } from "./header.client";
 
 export default function Header({ className }: { className?: string }) {
   className ??= "sticky top-0 bg-red border-b border-strong";

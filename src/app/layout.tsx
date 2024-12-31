@@ -1,7 +1,7 @@
-import "@/styles/globals.css";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import classNames from "classnames";
 import { Nunito_Sans, Raleway } from "next/font/google";
+import "./globals.css";
 
 const nunito = Nunito_Sans({
   subsets: ["latin"],
