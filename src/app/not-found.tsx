@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function NotFoundPage() {
   return (
     <>
-      <Header />
+      <Header className="sticky top-0 bg-red border-b border-strong" />
       <main className="items-center">
         <section className="text-center">
           <h1 className="font-bold text-2xl">Not Found</h1>

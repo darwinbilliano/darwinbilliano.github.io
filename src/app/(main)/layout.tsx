@@ -8,7 +8,7 @@ export default function MainLayout({
 }) {
   return (
     <>
-      <Header />
+      <Header className="sticky top-0 bg-red border-b border-strong" />
       {children}
       <Footer />
     </>

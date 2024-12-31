@@ -8,7 +8,6 @@ import { NavLinks } from "./header.client";
 
 export default async function Header({ className }: { className?: string }) {
   const model = await loader.loadAsync<HeaderModel>("header.yaml");
-  className ??= "sticky top-0 bg-red border-b border-strong";
   return (
     <header className={className}>
       <nav className="flex items-center justify-between h-14 px-12 md:px-32 font-bold">
