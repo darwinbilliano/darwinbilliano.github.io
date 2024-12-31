@@ -6,23 +6,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { NavLinks } from "./header.client";
 
-export default async function Header({ className }: { className?: string }) {
-  const model = await loader.loadAsync<HeaderModel>("header.yaml");
-  return (
-    <header className={className}>
-      <nav className="flex items-center justify-between h-14 px-12 md:px-32 font-bold">
-        <h1 className="text-xl">
-          <Link href="/">@billiano</Link>
-        </h1>
-        <div className="flex items-center gap-8 max-sm:hidden">
-          <NavLinks model={model} />
-          <SocialLinks model={model} />
-        </div>
-      </nav>
-    </header>
-  );
-}
-
 function SocialLinks({ model }: { model: HeaderModel }) {
   return (
     <ul>
@@ -37,5 +20,22 @@ function SocialLinks({ model }: { model: HeaderModel }) {
         );
       })}
     </ul>
+  );
+}
+
+export default async function Header({ className }: { className?: string }) {
+  const model = await loader.loadAsync<HeaderModel>("header.yaml");
+  return (
+    <header className={className}>
+      <nav className="flex items-center justify-between h-14 px-12 md:px-32 font-bold">
+        <h1 className="text-xl">
+          <Link href="/">@billiano</Link>
+        </h1>
+        <div className="flex items-center gap-8 max-sm:hidden">
+          <NavLinks model={model} />
+          <SocialLinks model={model} />
+        </div>
+      </nav>
+    </header>
   );
 }

@@ -3,24 +3,7 @@ import loader from "@/utils/loader";
 import type { Metadata } from "next";
 import Link from "next/link";
 
-export const metadata: Metadata = {
-  title: "Portfolio",
-};
-
-export default async function PortfolioPage() {
-  const model = await loader.loadAsync<PortfolioModel>("portfolio.yaml");
-  return (
-    <main className="items-center">
-      <section className="w-full max-w-6xl">
-        <h1 className="font-bold text-2xl text-center">Projects</h1>
-        <br />
-        <Projects model={model} />
-      </section>
-    </main>
-  );
-}
-
-function Projects({ model }: { model: PortfolioModel }) {
+function ProjectsView({ model }: { model: PortfolioModel }) {
   return (
     <ul className="grid grid-cols-[repeat(auto-fill,minmax(20rem,1fr))] gap-8">
       {model.projects.map(({ href, title, description, tags }) => (
@@ -46,5 +29,22 @@ function Projects({ model }: { model: PortfolioModel }) {
         </li>
       ))}
     </ul>
+  );
+}
+
+export const metadata: Metadata = {
+  title: "Portfolio",
+};
+
+export default async function PortfolioPage() {
+  const model = await loader.loadAsync<PortfolioModel>("portfolio.yaml");
+  return (
+    <main className="items-center">
+      <section className="w-full max-w-6xl">
+        <h1 className="font-bold text-2xl text-center">Projects</h1>
+        <br />
+        <ProjectsView model={model} />
+      </section>
+    </main>
   );
 }
