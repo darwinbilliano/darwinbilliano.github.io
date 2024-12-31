@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 export default function ArticlePage() {
   return (
     <main className="items-center">
-      <section className="section-w-2xl">
+      <section className="w-full max-w-2xl">
         <h1 className="font-bold text-2xl text-center">More About Me</h1>
         <br />
         <div className="text-justify">

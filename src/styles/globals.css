@@ -13,27 +13,7 @@
 }
 
 @layer components {
-  a {
-    &.btn {
-      @apply inline-block px-6 py-2 bg-red hover:bg-red-light border border-light rounded;
-    }
-  }
-
-  div {
-    &.section-container {
-      &.section-container-center {
-        @apply flex flex-col items-center;
-      }
-    }
-  }
-
-  section {
-    &.section-w-2xl {
-      @apply w-full max-w-2xl;
-    }
-
-    &.section-w-6xl {
-      @apply w-full max-w-6xl;
-    }
+  .btn {
+    @apply inline-block px-6 py-2 bg-red hover:bg-red-light border border-light rounded;
   }
 }

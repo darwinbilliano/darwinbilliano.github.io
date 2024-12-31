@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <main>
-      <div className="section-container section-container-center">
-        <section className="section-w-2xl">
+      <div className="flex flex-col items-center">
+        <section className="w-full max-w-2xl">
           <h1 className="font-bold text-2xl text-center">About Me</h1>
           <br />
           <div className="p-8 text-justify bg-slate-light border rounded">
@@ -19,15 +19,15 @@ export default function AboutPage() {
           </div>
         </section>
       </div>
-      <div className="section-container section-container-center bg-slate-light">
-        <section className="section-w-6xl">
+      <div className="flex flex-col items-center bg-slate-light">
+        <section className="w-full max-w-6xl">
           <h1 className="font-bold text-2xl text-center">Skills</h1>
           <br />
           <Skills />
         </section>
       </div>
-      <div className="section-container section-container-center">
-        <section className="section-w-2xl">
+      <div className="flex flex-col items-center">
+        <section className="w-full max-w-2xl">
           <h1 className="font-bold text-2xl text-center">Go Deeper</h1>
           <br />
           <Links />

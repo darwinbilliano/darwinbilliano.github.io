@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function PortfolioPage() {
   return (
     <main className="items-center">
-      <section className="section-w-6xl">
+      <section className="w-full max-w-6xl">
         <h1 className="font-bold text-2xl text-center">Projects</h1>
         <br />
         <Projects />
