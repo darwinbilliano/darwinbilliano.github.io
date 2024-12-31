@@ -1,4 +1,5 @@
-import { projects } from "@/content/portfolio";
+import type PortfolioModel from "@/models/portfolio";
+import loader from "@/utils/loader";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -6,22 +7,23 @@ export const metadata: Metadata = {
   title: "Portfolio",
 };
 
-export default function PortfolioPage() {
+export default async function PortfolioPage() {
+  const model = await loader.loadAsync<PortfolioModel>("portfolio.yaml");
   return (
     <main className="items-center">
       <section className="w-full max-w-6xl">
         <h1 className="font-bold text-2xl text-center">Projects</h1>
         <br />
-        <Projects />
+        <Projects model={model} />
       </section>
     </main>
   );
 }
 
-function Projects() {
+function Projects({ model }: { model: PortfolioModel }) {
   return (
     <ul className="grid grid-cols-[repeat(auto-fill,minmax(20rem,1fr))] gap-8">
-      {projects.map(({ href, title, description, tags }) => (
+      {model.projects.map(({ href, title, description, tags }) => (
         <li key={href}>
           <Link className="h-full" href={href}>
             <div className="flex flex-col h-full p-8 bg-slate-light border rounded">
