@@ -1,5 +1,3 @@
-"use client";
-
 import { socialLinks } from "@/content/header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
