@@ -1,9 +1,13 @@
-import { socialLinks } from "@/content/header";
+import type HeaderModel from "@/models/header";
+import loader from "@/utils/loader";
+import type { IconDefinition } from "@fortawesome/free-brands-svg-icons";
+import * as fa from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { NavLinks } from "./header.client";
 
-export default function Header({ className }: { className?: string }) {
+export default async function Header({ className }: { className?: string }) {
+  const model = await loader.loadAsync<HeaderModel>("header.yaml");
   className ??= "sticky top-0 bg-red border-b border-strong";
   return (
     <header className={className}>
@@ -12,24 +16,27 @@ export default function Header({ className }: { className?: string }) {
           <Link href="/">@billiano</Link>
         </h1>
         <div className="flex items-center gap-8 max-sm:hidden">
-          <NavLinks />
-          <SocialLinks />
+          <NavLinks model={model} />
+          <SocialLinks model={model} />
         </div>
       </nav>
     </header>
   );
 }
 
-function SocialLinks() {
+function SocialLinks({ model }: { model: HeaderModel }) {
   return (
     <ul>
-      {socialLinks.map(({ href, icon }) => (
-        <li className="inline-block" key={href}>
-          <Link className="p-1" href={href}>
-            <FontAwesomeIcon className="fa-xl" icon={icon} />
-          </Link>
-        </li>
-      ))}
+      {model.socialLinks.map(({ href, icon }) => {
+        const faIcon = fa[icon as keyof typeof fa] as IconDefinition;
+        return (
+          <li className="inline-block" key={href}>
+            <Link className="p-1" href={href}>
+              <FontAwesomeIcon className="fa-xl" icon={faIcon} />
+            </Link>
+          </li>
+        );
+      })}
     </ul>
   );
 }

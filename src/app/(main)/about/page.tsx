@@ -1,4 +1,5 @@
-import { links, skills } from "@/content/about";
+import type AboutModel from "@/models/about";
+import loader from "@/utils/loader";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -6,7 +7,8 @@ export const metadata: Metadata = {
   title: "About Me",
 };
 
-export default function AboutPage() {
+export default async function AboutPage() {
+  const model = await loader.loadAsync<AboutModel>("about.yaml");
   return (
     <main>
       <div className="flex flex-col items-center">
@@ -23,29 +25,29 @@ export default function AboutPage() {
         <section className="w-full max-w-6xl">
           <h1 className="font-bold text-2xl text-center">Skills</h1>
           <br />
-          <Skills />
+          <Skills model={model} />
         </section>
       </div>
       <div className="flex flex-col items-center">
         <section className="w-full max-w-2xl">
           <h1 className="font-bold text-2xl text-center">Go Deeper</h1>
           <br />
-          <Links />
+          <Links model={model} />
         </section>
       </div>
     </main>
   );
 }
 
-function Skills() {
+function Skills({ model }: { model: AboutModel }) {
   return (
     <ul className="grid grid-cols-[repeat(auto-fill,minmax(12rem,1fr))] gap-4">
-      {skills
-        .flatMap(({ skills }) => skills)
-        .map((skill) => (
-          <li key={skill}>
+      {model.skills
+        .flatMap(({ items }) => items)
+        .map((item) => (
+          <li key={item}>
             <div className="h-full p-4 bg-red border border-light rounded">
-              <p className="font-bold text-center">{skill}</p>
+              <p className="font-bold text-center">{item}</p>
             </div>
           </li>
         ))}
@@ -53,14 +55,14 @@ function Skills() {
   );
 }
 
-function Links() {
+function Links({ model }: { model: AboutModel }) {
   return (
     <ul className="flex max-sm:flex-col gap-4">
-      {links.map(({ href, text }) => (
+      {model.links.map(({ href, label }) => (
         <li className="flex-1" key={href}>
           <Link href={href}>
             <div className="p-4 bg-red hover:bg-red-light border border-light rounded">
-              <p className="font-bold text-center">{text}</p>
+              <p className="font-bold text-center">{label}</p>
             </div>
           </Link>
         </li>
