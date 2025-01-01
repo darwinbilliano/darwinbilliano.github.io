@@ -1,7 +1,6 @@
 import type HeaderModel from "@/models/header";
+import fa from "@/utils/fa";
 import loader from "@/utils/loader";
-import type { IconDefinition } from "@fortawesome/free-brands-svg-icons";
-import * as fa from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { NavLinks } from "./header.client";
@@ -10,7 +9,7 @@ function SocialLinks({ model }: { model: HeaderModel }) {
   return (
     <ul>
       {model.socialLinks.map(({ href, icon }) => {
-        const faIcon = fa[icon as keyof typeof fa] as IconDefinition;
+        const faIcon = fa.getBrand(icon);
         return (
           <li className="inline-block" key={href}>
             <Link className="p-1" href={href}>
