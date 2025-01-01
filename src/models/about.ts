@@ -1,8 +1,5 @@
 export default interface AboutModel {
-  skills: {
-    title: string;
-    items: string[];
-  }[];
+  skills: string[];
   links: {
     href: string;
     label: string;

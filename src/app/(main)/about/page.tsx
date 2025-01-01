@@ -6,15 +6,13 @@ import Link from "next/link";
 function SkillsView({ model }: { model: AboutModel }) {
   return (
     <ul className="grid grid-cols-[repeat(auto-fill,minmax(12rem,1fr))] gap-4">
-      {model.skills
-        .flatMap(({ items }) => items)
-        .map((item) => (
-          <li key={item}>
-            <div className="h-full p-4 bg-red border border-light rounded">
-              <p className="font-bold text-center">{item}</p>
-            </div>
-          </li>
-        ))}
+      {model.skills.map((skill) => (
+        <li key={skill}>
+          <div className="h-full p-4 bg-red border border-light rounded">
+            <p className="font-bold text-center">{skill}</p>
+          </div>
+        </li>
+      ))}
     </ul>
   );
 }

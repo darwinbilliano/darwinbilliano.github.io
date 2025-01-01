@@ -9,7 +9,7 @@ export function NavLinks({ model }: { model: HeaderModel }) {
   const path = usePathname();
   return (
     <ul>
-      {model.navLinks.map(({ href, label }) => {
+      {model.links.map(({ href, label }) => {
         const className = classNames("inline-block px-6 py-2 hover:underline", {
           underline: path.startsWith(href),
         });

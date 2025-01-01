@@ -1,18 +1,12 @@
 skills:
-  - title: Software Dev
-    items:
-      - C#
-      - Avalonia UI
-  - title: Full-stack Dev
-    items:
-      - ASP.NET Core
-      - Next.js
-      - Tailwind CSS
-  - title: Dev Tools
-    items:
-      - Docker
-      - Git
-      - Linux
+  - C#
+  - Avalonia UI
+  - ASP.NET Core
+  - Next.js
+  - Tailwind CSS
+  - Docker
+  - Git
+  - Linux
 
 links:
   - href: /portfolio
