@@ -1,6 +1,5 @@
 import type HeaderModel from "@/models/header";
 import type SocialModel from "@/models/social";
-import fa from "@/utils/fa";
 import loader from "@/utils/loader";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
@@ -10,11 +9,10 @@ function SocialLinks({ model }: { model: SocialModel }) {
   return (
     <ul>
       {model.links.map(({ href, icon }) => {
-        const faIcon = fa.getBrand(icon);
         return (
           <li className="inline-block" key={href}>
             <Link className="p-1" href={href}>
-              <FontAwesomeIcon className="fa-xl" icon={faIcon} />
+              <FontAwesomeIcon className="fa-xl" icon={icon} />
             </Link>
           </li>
         );

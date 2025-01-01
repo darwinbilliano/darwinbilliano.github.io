@@ -1,3 +1,5 @@
 links:
   - href: https://github.com/darwinbilliano
-    icon: faGithub
+    icon:
+      iconName: github
+      prefix: fab
