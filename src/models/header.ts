@@ -1,10 +1,6 @@
 export default interface HeaderModel {
-  navLinks: {
+  links: {
     href: string;
     label: string;
-  }[];
-  socialLinks: {
-    href: string;
-    icon: string;
   }[];
 }

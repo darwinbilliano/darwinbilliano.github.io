@@ -1,11 +1,7 @@
-navLinks:
+links:
   - href: /about
     label: About
   - href: /portfolio
     label: Portfolio
   - href: /articles
     label: Articles
-
-socialLinks:
-  - href: https://github.com/darwinbilliano
-    icon: faGithub
