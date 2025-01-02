@@ -5,7 +5,7 @@ import Link from "next/link";
 
 function ProjectsView({ model }: { model: PortfolioModel }) {
   return (
-    <ul className="grid grid-cols-[repeat(auto-fill,minmax(20rem,1fr))] gap-8">
+    <ul className="grid grid-cols-[repeat(auto-fill,minmax(16rem,1fr))] gap-8">
       {model.projects.map(({ href, title, description, tags }) => (
         <li key={href}>
           <Link className="h-full" href={href}>

@@ -8,7 +8,7 @@
   }
 
   section {
-    @apply p-12;
+    @apply p-8 sm:p-12;
   }
 }
 
