@@ -12,10 +12,10 @@ import { useEffect, useState } from "react";
 function NavLinks({ model }: { model: NavModel }) {
   const path = usePathname();
   return (
-    <ul className="flex max-md:flex-col">
+    <ul className="flex max-lg:flex-col">
       {model.links.map(({ href, label }) => {
         const className = classNames(
-          "w-full px-12 md:px-6 py-3 md:py-2 hover:underline",
+          "w-full px-12 lg:px-6 py-3 lg:py-2 hover:underline",
           {
             underline: path.startsWith(href),
           }
@@ -38,7 +38,7 @@ function SocialLinks({ model }: { model: SocialModel }) {
       {model.links.map(({ href, icon }) => {
         return (
           <li className="flex" key={href}>
-            <Link className="p-3 md:p-2" href={href}>
+            <Link className="p-3 lg:p-2" href={href}>
               <FontAwesomeIcon className="fa-xl" icon={icon} />
             </Link>
           </li>
@@ -58,9 +58,9 @@ function Links({
   toggle: boolean;
 }) {
   const className = classNames(
-    "max-md:absolute flex max-md:flex-col items-stretch md:gap-8 w-full left-0 top-14 max-md:py-4 bg-inherit border-inherit max-md:border-b",
+    "max-lg:absolute flex max-lg:flex-col items-stretch lg:gap-8 w-full left-0 top-14 max-lg:py-4 bg-inherit border-inherit max-lg:border-b",
     {
-      "max-md:hidden": !toggle,
+      "max-lg:hidden": !toggle,
     }
   );
   return (
@@ -94,13 +94,13 @@ export default function Nav({
   }, [state]);
 
   return (
-    <nav className="relative flex items-center justify-between h-14 px-12 md:px-24 lg:px-32 font-bold bg-inherit border-inherit">
+    <nav className="relative flex items-center justify-between h-14 px-12 lg:px-32 font-bold bg-inherit border-inherit">
       <h1 className="text-xl">
         <Link href="/">@billiano</Link>
       </h1>
       <div className="flex items-center bg-inherit border-inherit">
         <Links model={model} socialModel={socialModel} toggle={state} />
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <button className="px-4 py-2" onClick={toggle}>
             <FontAwesomeIcon className="fa-xl" icon={faBars} />
           </button>
