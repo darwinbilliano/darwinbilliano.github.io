@@ -5,11 +5,11 @@ import Link from "next/link";
 
 function ProjectsView({ model }: { model: PortfolioModel }) {
   return (
-    <ul className="grid grid-cols-[repeat(auto-fill,minmax(20rem,1fr))] gap-8">
+    <ul className="grid grid-cols-[repeat(auto-fill,minmax(16rem,1fr))] gap-8">
       {model.projects.map(({ href, title, description, tags }) => (
         <li key={href}>
           <Link className="h-full" href={href}>
-            <div className="flex flex-col h-full p-8 bg-slate-light border rounded">
+            <div className="flex flex-col h-full p-8 bg-slate-light border border-light rounded">
               <h2 className="font-bold">{title}</h2>
               <p>{description}</p>
               <br />
@@ -17,7 +17,7 @@ function ProjectsView({ model }: { model: PortfolioModel }) {
                 <ul className="flex flex-wrap gap-2">
                   {tags.map((tag) => (
                     <li key={tag}>
-                      <span className="px-2 py-1 text-xs bg-red-light rounded">
+                      <span className="px-2 py-1 text-xs bg-red rounded">
                         {tag}
                       </span>
                     </li>

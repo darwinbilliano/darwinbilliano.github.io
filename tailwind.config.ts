@@ -1,33 +1,39 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
   theme: {
-    backgroundColor: {
-      red: {
-        DEFAULT: "hsl(357, 80%, 42%)",
-        light: "hsl(357, 80%, 48%)",
+    colors: {
+      inherit: "inherit",
+      transparent: "transparent",
+    },
+    extend: {
+      backgroundColor: {
+        red: {
+          DEFAULT: "rgb(192, 16, 24)",
+          light: "rgb(200, 24, 32)",
+        },
+        slate: {
+          DEFAULT: "rgb(14, 14, 16)",
+          light: "rgb(26, 24, 24)",
+        },
       },
-      slate: {
-        DEFAULT: "hsl(230, 10%, 3%)",
-        light: "hsl(230, 7%, 6%)",
+      borderColor: {
+        DEFAULT: "transparent",
+        light: "rgba(255, 255, 255, 0.12)",
+        medium: "rgba(255, 255, 255, 0.24)",
+        strong: "rgba(255, 255, 255, 0.36)",
+      },
+      textColor: {
+        white: "rgb(255, 255, 255)",
       },
     },
-    borderColor: {
-      DEFAULT: "hsla(0, 0%, 100%, 8%)",
-      light: "hsla(0, 0%, 100%, 16%)",
-      strong: "hsla(0, 0%, 100%, 32%)",
-    },
-    boxShadow: {
-      DEFAULT: "0 0 1px 2px hsla(0, 0%, 100%, 10%)",
-    },
-    colors: {},
     fontFamily: {
       sans: "var(--font-nunito)",
       display: "var(--font-raleway)",
-    },
-    textColor: {
-      white: "hsl(0, 0%, 100%)",
     },
   },
 };
