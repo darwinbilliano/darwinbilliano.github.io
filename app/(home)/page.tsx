@@ -10,9 +10,9 @@ export default function HomePage() {
     <main className="justify-center">
       <section className="text-center">
         <div className="font-display font-semibold tracking-widest">
-          <h1 className="text-3xl md:text-5xl">Darwin Billiano</h1>
+          <h1 className="text-3xl lg:text-5xl">Darwin Billiano</h1>
           <br />
-          <h2 className="text-2xl md:text-4xl">
+          <h2 className="text-2xl lg:text-4xl">
             Software and Full-stack Developer
           </h2>
         </div>
