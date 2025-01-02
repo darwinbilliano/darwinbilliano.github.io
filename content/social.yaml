@@ -3,3 +3,7 @@ links:
     icon:
       iconName: github
       prefix: fab
+  - href: https://x.com/darwinbilliano
+    icon:
+      iconName: x-twitter
+      prefix: fab

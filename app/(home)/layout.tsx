@@ -7,7 +7,7 @@ export default function HomeLayout({
 }) {
   return (
     <>
-      <Header className="fixed w-full bg-slate" />
+      <Header className="fixed w-full bg-slate border-light" />
       {children}
     </>
   );

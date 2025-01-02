@@ -45,7 +45,7 @@ export default function ArticlePage() {
             </p>
           </div>
           <br />
-          <div className="p-8 bg-slate-light border rounded">
+          <div className="p-8 bg-slate-light border border-light rounded">
             <h2 className="font-bold">Fun Fact</h2>
             <p>
               When it comes to programming, one thing I&apos;m not a fan of is
