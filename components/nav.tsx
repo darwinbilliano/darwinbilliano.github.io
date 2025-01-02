@@ -17,7 +17,7 @@ function NavLinks({ model }: { model: NavModel }) {
         const className = classNames(
           "w-full px-12 lg:px-6 py-3 lg:py-2 hover:underline",
           {
-            underline: path.startsWith(href),
+            underline: path === href,
           }
         );
         return (
