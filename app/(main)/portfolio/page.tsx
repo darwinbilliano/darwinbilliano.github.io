@@ -17,7 +17,7 @@ function ProjectsView({ model }: { model: PortfolioModel }) {
                 <ul className="flex flex-wrap gap-2">
                   {tags.map((tag) => (
                     <li key={tag}>
-                      <span className="px-2 py-1 text-xs bg-red-light rounded">
+                      <span className="px-2 py-1 text-xs bg-red rounded">
                         {tag}
                       </span>
                     </li>

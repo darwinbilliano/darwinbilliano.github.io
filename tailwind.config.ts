@@ -13,25 +13,22 @@ const config: Config = {
     extend: {
       backgroundColor: {
         red: {
-          DEFAULT: "hsl(357, 80%, 42%)",
-          light: "hsl(357, 80%, 48%)",
+          DEFAULT: "rgb(192, 16, 24)",
+          light: "rgb(200, 24, 32)",
         },
         slate: {
-          DEFAULT: "hsl(230, 10%, 3%)",
-          light: "hsl(230, 7%, 6%)",
+          DEFAULT: "rgb(14, 14, 16)",
+          light: "rgb(26, 24, 24)",
         },
       },
       borderColor: {
         DEFAULT: "transparent",
-        light: "hsla(0, 0%, 100%, 8%)",
-        medium: "hsla(0, 0%, 100%, 16%)",
-        strong: "hsla(0, 0%, 100%, 32%)",
-      },
-      boxShadow: {
-        DEFAULT: "0 0 1px 2px hsla(0, 0%, 100%, 10%)",
+        light: "rgba(255, 255, 255, 0.12)",
+        medium: "rgba(255, 255, 255, 0.24)",
+        strong: "rgba(255, 255, 255, 0.36)",
       },
       textColor: {
-        white: "hsl(0, 0%, 100%)",
+        white: "rgb(255, 255, 255)",
       },
     },
     fontFamily: {
