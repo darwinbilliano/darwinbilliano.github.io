@@ -9,7 +9,7 @@ function ArticlesView({ model }: { model: ArticlesModel }) {
       {model.articles.map(({ href, title, description }) => (
         <li key={href}>
           <Link href={href}>
-            <div className="p-8 bg-slate-light border rounded">
+            <div className="p-8 bg-slate-light border border-light rounded">
               <h2 className="font-bold">{title}</h2>
               <p>{description}</p>
             </div>

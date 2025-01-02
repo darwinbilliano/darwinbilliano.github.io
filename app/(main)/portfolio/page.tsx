@@ -9,7 +9,7 @@ function ProjectsView({ model }: { model: PortfolioModel }) {
       {model.projects.map(({ href, title, description, tags }) => (
         <li key={href}>
           <Link className="h-full" href={href}>
-            <div className="flex flex-col h-full p-8 bg-slate-light border rounded">
+            <div className="flex flex-col h-full p-8 bg-slate-light border border-light rounded">
               <h2 className="font-bold">{title}</h2>
               <p>{description}</p>
               <br />

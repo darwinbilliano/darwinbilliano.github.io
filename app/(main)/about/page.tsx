@@ -8,7 +8,7 @@ function SkillsView({ model }: { model: AboutModel }) {
     <ul className="grid grid-cols-[repeat(auto-fill,minmax(12rem,1fr))] gap-4">
       {model.skills.map((skill) => (
         <li key={skill}>
-          <div className="h-full p-4 bg-red border border-light rounded">
+          <div className="h-full p-4 bg-red border border-medium rounded">
             <p className="font-bold text-center">{skill}</p>
           </div>
         </li>
@@ -23,7 +23,7 @@ function LinksView({ model }: { model: AboutModel }) {
       {model.links.map(({ href, label }) => (
         <li className="flex-1" key={href}>
           <Link href={href}>
-            <div className="p-4 bg-red hover:bg-red-light border border-light rounded">
+            <div className="p-4 bg-red hover:bg-red-light border border-medium rounded">
               <p className="font-bold text-center">{label}</p>
             </div>
           </Link>
@@ -45,7 +45,7 @@ export default async function AboutPage() {
         <section className="w-full max-w-2xl">
           <h1 className="font-bold text-2xl text-center">About Me</h1>
           <br />
-          <div className="p-8 text-justify bg-slate-light border rounded">
+          <div className="p-8 text-justify bg-slate-light border border-light rounded">
             Hi! I&apos;m Darwin Billiano, a high school student that love tech
             and a hobbyist self-taught programmer.
           </div>
