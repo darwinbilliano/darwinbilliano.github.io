@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <main className="justify-center">
+    <main className="justify-center min-h-dvh">
       <section className="text-center">
         <div className="font-display font-semibold tracking-widest">
           <h1 className="text-3xl lg:text-5xl">Darwin Billiano</h1>
