@@ -58,7 +58,7 @@ function Links({
   toggle: boolean;
 }) {
   const className = classNames(
-    "max-lg:absolute flex max-lg:flex-col items-stretch lg:gap-8 w-full left-0 top-14 max-lg:py-4 bg-inherit border-inherit max-lg:border-b",
+    "flex max-lg:flex-col items-stretch lg:gap-8 w-full max-lg:py-4 max-lg:absolute left-0 top-14 bg-inherit border-inherit max-lg:border-b",
     {
       "max-lg:hidden": !toggle,
     }
@@ -94,7 +94,7 @@ export default function Nav({
   }, [state]);
 
   return (
-    <nav className="relative flex items-center justify-between h-14 px-12 lg:px-32 font-bold bg-inherit border-inherit">
+    <nav className="flex items-center justify-between h-14 px-12 lg:px-32 relative font-bold bg-inherit border-inherit">
       <h1 className="text-xl">
         <Link href="/">@billiano</Link>
       </h1>
