@@ -1,5 +1,5 @@
 import type ArticlesModel from "@/models/articles";
-import loader from "@/utils/loader";
+import yaml from "@/utils/content/yaml";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 };
 
 export default async function ArticlesPage() {
-  const model = await loader.loadAsync<ArticlesModel>("articles.yaml");
+  const model = await yaml.read<ArticlesModel>("articles.yaml");
   return (
     <main className="items-center">
       <section className="w-full max-w-2xl">

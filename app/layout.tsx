@@ -1,4 +1,4 @@
-import "@/utils/fa";
+import "@/utils/fa/init";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import classNames from "classnames";
 import { Nunito_Sans, Raleway } from "next/font/google";

@@ -1,5 +1,5 @@
 import type PortfolioModel from "@/models/portfolio";
-import loader from "@/utils/loader";
+import yaml from "@/utils/content/yaml";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
 };
 
 export default async function PortfolioPage() {
-  const model = await loader.loadAsync<PortfolioModel>("portfolio.yaml");
+  const model = await yaml.read<PortfolioModel>("portfolio.yaml");
   return (
     <main className="items-center">
       <section className="w-full max-w-6xl">
