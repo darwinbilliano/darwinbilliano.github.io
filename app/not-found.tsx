@@ -14,7 +14,9 @@ export default function NotFoundPage() {
       <main className="items-center">
         <section className="text-center">
           <h1 className="font-bold text-2xl">Not Found</h1>
+          <br />
           <p>It looks like you&apos;re lost, here&apos;s the way back</p>
+          <br />
           <br />
           <Link className="btn" href="/">
             Go Back
