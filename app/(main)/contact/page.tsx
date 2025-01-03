@@ -10,7 +10,8 @@ export default function ContactPage() {
       <section className="w-full max-w-2xl">
         <div className="text-center">
           <h1 className="font-bold text-2xl">Contact Me</h1>
-          <p>Contact is not available at the time.</p>
+          <br />
+          <p>Contact is not available at the time...</p>
         </div>
       </section>
     </main>

@@ -1,7 +1,6 @@
 "use client";
 
-import type NavModel from "@/models/header";
-import type SocialModel from "@/models/social";
+import type HeaderModel from "@/models/header";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import classNames from "classnames";
@@ -9,102 +8,71 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
-function NavLinks({ model }: { model: NavModel }) {
+function NavMenu({ model, state }: { model: HeaderModel; state: boolean }) {
   const path = usePathname();
-  return (
-    <ul className="flex max-lg:flex-col">
-      {model.links.map(({ href, label }) => {
-        const className = classNames(
-          "w-full px-12 lg:px-6 py-3 lg:py-2 hover:underline",
-          {
-            underline: path === href,
-          }
-        );
-        return (
-          <li className="flex" key={href}>
-            <Link className={className} href={href}>
-              {label}
-            </Link>
-          </li>
-        );
-      })}
-    </ul>
-  );
-}
-
-function SocialLinks({ model }: { model: SocialModel }) {
-  return (
-    <ul className="flex items-center justify-center">
-      {model.links.map(({ href, icon }) => {
-        return (
-          <li className="flex" key={href}>
-            <Link className="p-3 lg:p-2" href={href}>
-              <FontAwesomeIcon className="fa-xl" icon={icon} />
-            </Link>
-          </li>
-        );
-      })}
-    </ul>
-  );
-}
-
-function Links({
-  model,
-  socialModel,
-  toggle,
-}: {
-  model: NavModel;
-  socialModel: SocialModel;
-  toggle: boolean;
-}) {
   const className = classNames(
-    "max-lg:absolute flex max-lg:flex-col items-stretch lg:gap-8 w-full left-0 top-14 max-lg:py-4 bg-inherit border-inherit max-lg:border-b",
+    "max-lg:absolute left-0 right-0 top-14 max-lg:py-4 bg-inherit border-inherit max-lg:border-b",
     {
-      "max-lg:hidden": !toggle,
+      "max-lg:hidden": !state,
     }
   );
   return (
     <div className={className}>
-      <NavLinks model={model} />
-      <SocialLinks model={socialModel} />
+      <ul className="flex max-lg:flex-col">
+        {model.links.map(({ href, label }) => {
+          const className = classNames(
+            "px-12 lg:px-6 py-3 lg:py-2 hover:underline",
+            {
+              underline: path === href,
+            }
+          );
+          return (
+            <li className="flex flex-col" key={href}>
+              <Link className={className} href={href}>
+                {label}
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 }
 
-export default function Nav({
-  model,
-  socialModel,
+function HamburgerMenu({
+  state,
+  setState,
 }: {
-  model: NavModel;
-  socialModel: SocialModel;
+  state: boolean;
+  setState: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
-  const [state, setState] = useState(false);
-
-  function toggle() {
-    setState((state) => !state);
-  }
-
-  function close() {
-    setState(false);
-  }
+  const toggle = () => setState((state) => !state);
 
   useEffect(() => {
+    const close = () => setState(false);
     document.addEventListener("click", close);
     return () => document.removeEventListener("click", close);
-  }, [state]);
+  }, [state, setState]);
 
   return (
-    <nav className="relative flex items-center justify-between h-14 px-12 lg:px-32 font-bold bg-inherit border-inherit">
+    <div className="lg:hidden">
+      <button className="px-2 py-3" onClick={toggle}>
+        <FontAwesomeIcon className="fa-xl" icon={faBars} />
+      </button>
+    </div>
+  );
+}
+
+export default function Nav({ model }: { model: HeaderModel }) {
+  const [state, setState] = useState(false);
+  return (
+    <nav className="flex items-center justify-between h-14 px-12 lg:px-32 font-bold bg-inherit border-inherit">
       <h1 className="text-xl">
-        <Link href="/">@billiano</Link>
+        <Link href="/">@darwinbilliano</Link>
       </h1>
-      <div className="flex items-center bg-inherit border-inherit">
-        <Links model={model} socialModel={socialModel} toggle={state} />
-        <div className="lg:hidden">
-          <button className="px-4 py-2" onClick={toggle}>
-            <FontAwesomeIcon className="fa-xl" icon={faBars} />
-          </button>
-        </div>
+      <div className="flex items-center lg:gap-8 bg-inherit border-inherit">
+        <NavMenu model={model} state={state} />
+        <HamburgerMenu state={state} setState={setState} />
       </div>
     </nav>
   );

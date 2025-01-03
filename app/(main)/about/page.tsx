@@ -1,5 +1,5 @@
 import type AboutModel from "@/models/about";
-import loader from "@/utils/loader";
+import yaml from "@/utils/content/yaml";
 import type { Metadata } from "next";
 
 function SkillsView({ model }: { model: AboutModel }) {
@@ -21,16 +21,18 @@ export const metadata: Metadata = {
 };
 
 export default async function AboutPage() {
-  const model = await loader.loadAsync<AboutModel>("about.yaml");
+  const model = await yaml.read<AboutModel>("about.yaml");
   return (
     <main>
       <div className="flex flex-col items-center">
         <section className="w-full max-w-2xl">
           <h1 className="font-bold text-2xl text-center">About Me</h1>
           <br />
-          <div className="p-8 text-justify bg-slate-light border border-light rounded">
-            Hi! I&apos;m Darwin Billiano, a high school student that love tech
-            and a hobbyist self-taught programmer.
+          <div className="p-8 bg-slate-light border border-light rounded">
+            <p className="text-justify">
+              Hi! I&apos;m Darwin Billiano, a high school student that love tech
+              and a hobbyist self-taught programmer.
+            </p>
           </div>
         </section>
       </div>
