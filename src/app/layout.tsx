@@ -1,5 +1,4 @@
-import "./fonts";
-import "./globals.css";
+import "@/styles";
 
 export default function RootLayout({
   children,
