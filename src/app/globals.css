@@ -5,3 +5,9 @@
   --font-sans: "Nunito Sans";
   --font-display: "Space Grotesk";
 }
+
+@layer components {
+  .btn {
+    @apply inline-block rounded-sm border border-red-400 bg-red-500 px-6 py-2 text-white hover:brightness-110 active:brightness-125;
+  }
+}
