@@ -1,1 +1,7 @@
 @import "tailwindcss";
+
+@theme {
+  --font-*: initial;
+  --font-sans: "Nunito Sans";
+  --font-display: "Space Grotesk";
+}

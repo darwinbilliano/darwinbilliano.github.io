@@ -1,3 +1,4 @@
+import "./fonts";
 import "./globals.css";
 
 export default function RootLayout({
@@ -7,7 +8,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="bg-zinc-950 text-gray-300">{children}</body>
     </html>
   );
 }
