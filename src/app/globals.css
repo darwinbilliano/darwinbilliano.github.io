@@ -2,8 +2,8 @@
 
 @theme {
   --font-*: initial;
-  --font-sans: "Nunito Sans";
-  --font-display: "Space Grotesk";
+  --font-sans: var(--font-nunito-sans);
+  --font-display: var(--font-space-grotesk);
 }
 
 @layer components {
