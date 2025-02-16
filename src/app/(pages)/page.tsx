@@ -41,7 +41,7 @@ export default function HomePage() {
               Here are some technologies I&apos;ve used in past projects:
             </p>
           </header>
-          <ul className="grid grid-cols-[repeat(auto-fit,minmax(10rem,1fr))] gap-4">
+          <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
             {skills.map(({ name }) => (
               <li key={name}>
                 <div className="panel text-center">
