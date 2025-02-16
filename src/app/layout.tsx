@@ -21,12 +21,7 @@ export default function RootLayout({
       className={`${nunitoSans.variable} ${spaceGrotesk.variable}`}
       lang="en"
     >
-      <body className="flex min-h-screen flex-col bg-zinc-950 text-gray-300">
-        <main className="flex-1">{children}</main>
-        <footer className="p-12 text-center">
-          &copy; 2025 Darwin Billiano
-        </footer>
-      </body>
+      <body className="bg-zinc-950 text-gray-300">{children}</body>
     </html>
   );
 }
