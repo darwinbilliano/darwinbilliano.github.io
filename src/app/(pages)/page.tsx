@@ -18,24 +18,26 @@ export default function HomePage() {
   return (
     <>
       <div id="hero" className="grid min-h-screen place-items-center">
-        <section className="p-12 text-center">
-          <h1 className="mb-2 font-display text-3xl text-white sm:text-5xl md:text-7xl">
-            Darwin Billiano
-          </h1>
-          <p className="mb-6 font-display text-xl">
-            Hobbyist Software and Full-stack Developer
-          </p>
-          <Link className="btn" href="#skills">
+        <section className="section text-center">
+          <header className="header">
+            <h1 className="header-title md:text-7xl">Darwin Billiano</h1>
+            <p className="header-description md:text-xl">
+              Hobbyist Software and Full-stack Developer
+            </p>
+          </header>
+          <Link className="btn" href="#about">
             Learn More
           </Link>
         </section>
       </div>
-      <div id="skills" className="flex min-h-screen flex-col items-center">
-        <section className="w-full max-w-4xl p-12">
-          <h1 className="mb-2 font-display text-4xl text-white">Skills</h1>
-          <p className="mb-6 font-display">
-            Here are some technologies I&apos;ve used in past projects:
-          </p>
+      <div id="about" className="flex min-h-screen flex-col items-center">
+        <section className="section max-w-4xl">
+          <header className="header">
+            <h1 className="header-title">Skills</h1>
+            <p className="header-description">
+              Here are some technologies I&apos;ve used in past projects:
+            </p>
+          </header>
           <ul className="grid grid-cols-[repeat(auto-fit,minmax(10rem,1fr))] gap-4">
             {skills.map((skill, i) => (
               <li key={i}>
