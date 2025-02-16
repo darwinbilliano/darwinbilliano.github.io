@@ -18,10 +18,10 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      className={`${nunitoSans.variable} ${spaceGrotesk.variable}`}
+      className={`scroll-smooth ${nunitoSans.variable} ${spaceGrotesk.variable}`}
       lang="en"
     >
-      <body className="bg-zinc-950 text-gray-300">{children}</body>
+      <body className="bg-zinc-950 text-zinc-300">{children}</body>
     </html>
   );
 }
