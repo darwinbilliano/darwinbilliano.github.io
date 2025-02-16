@@ -3,13 +3,13 @@ import Link from "next/link";
 
 const data = {
   skills: [
-    "C#",
-    "ASP.NET",
-    "TypeScript",
-    "Next.js",
-    "Tailwind CSS",
-    "Git",
-    "Docker",
+    { name: "C#", category: "Language" },
+    { name: "ASP.NET", category: "Web Framework" },
+    { name: "TypeScript", category: "Language" },
+    { name: "Next.js", category: "Web Framework" },
+    { name: "Tailwind CSS", category: "Web Framework" },
+    { name: "Git", category: "Tools" },
+    { name: "Docker", category: "Tools" },
   ],
 };
 
@@ -43,9 +43,11 @@ export default function HomePage() {
             </p>
           </header>
           <ul className="grid grid-cols-[repeat(auto-fit,minmax(10rem,1fr))] gap-4">
-            {skills.map((skill) => (
-              <li key={skill}>
-                <div className="panel text-center">{skill}</div>
+            {skills.map(({ name }) => (
+              <li key={name}>
+                <div className="panel text-center">
+                  <p>{name}</p>
+                </div>
               </li>
             ))}
           </ul>
