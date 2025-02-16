@@ -25,12 +25,12 @@ export default function HomePage() {
               Hobbyist Software and Full-stack Developer
             </p>
           </header>
-          <Link className="btn" href="#skills">
+          <Link className="btn" href="#about">
             Learn More
           </Link>
         </section>
       </div>
-      <div id="skills" className="flex min-h-screen flex-col items-center">
+      <div id="about" className="flex min-h-screen flex-col items-center">
         <section className="section max-w-4xl">
           <header className="header">
             <h1 className="header-title">Skills</h1>
