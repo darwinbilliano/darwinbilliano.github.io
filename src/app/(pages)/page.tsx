@@ -1,12 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-export const metadata: Metadata = {
-  title: "Darwin Billiano",
-};
-
-export default function HomePage() {
-  const skills = [
+const data = {
+  skills: [
     "C#",
     "ASP.NET",
     "TypeScript",
@@ -14,7 +10,15 @@ export default function HomePage() {
     "Tailwind CSS",
     "Git",
     "Docker",
-  ];
+  ],
+};
+
+export const metadata: Metadata = {
+  title: "Darwin Billiano",
+};
+
+export default function HomePage() {
+  const { skills } = data;
   return (
     <>
       <div id="hero" className="grid min-h-screen place-items-center">
@@ -39,8 +43,8 @@ export default function HomePage() {
             </p>
           </header>
           <ul className="grid grid-cols-[repeat(auto-fit,minmax(10rem,1fr))] gap-4">
-            {skills.map((skill, i) => (
-              <li key={i}>
+            {skills.map((skill) => (
+              <li key={skill}>
                 <div className="panel text-center">{skill}</div>
               </li>
             ))}
