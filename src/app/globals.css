@@ -14,11 +14,11 @@
   .header {
     @apply mb-6 space-y-2;
 
-    .header-title {
+    &-title {
       @apply font-display text-4xl text-white;
     }
 
-    .header-description {
+    &-description {
       @apply font-display;
     }
   }
