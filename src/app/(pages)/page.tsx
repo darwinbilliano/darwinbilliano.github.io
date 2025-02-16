@@ -39,9 +39,7 @@ export default function HomePage() {
           <ul className="grid grid-cols-[repeat(auto-fit,minmax(10rem,1fr))] gap-4">
             {skills.map((skill, i) => (
               <li key={i}>
-                <div className="rounded-md border border-zinc-700 bg-zinc-900 p-4 text-center">
-                  {skill}
-                </div>
+                <div className="panel text-center">{skill}</div>
               </li>
             ))}
           </ul>
