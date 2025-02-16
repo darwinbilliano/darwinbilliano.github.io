@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 
 const data = {
   skills: [
@@ -29,9 +28,9 @@ export default function HomePage() {
               Hobbyist Software and Full-stack Developer
             </p>
           </header>
-          <Link className="btn" href="#about">
+          <a className="btn" href="#about">
             Learn More
-          </Link>
+          </a>
         </section>
       </div>
       <div id="about" className="flex min-h-screen flex-col items-center">
