@@ -19,12 +19,12 @@ export default function HomePage() {
     <>
       <div id="hero" className="grid min-h-screen place-items-center">
         <section className="p-12 text-center">
-          <div className="mb-2 font-display text-3xl text-white sm:text-5xl md:text-7xl">
+          <h1 className="mb-2 font-display text-3xl text-white sm:text-5xl md:text-7xl">
             Darwin Billiano
-          </div>
-          <div className="mb-6 font-display text-xl">
+          </h1>
+          <p className="mb-6 font-display text-xl">
             Hobbyist Software and Full-stack Developer
-          </div>
+          </p>
           <Link className="btn" href="#skills">
             Learn More
           </Link>
