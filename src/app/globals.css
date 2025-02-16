@@ -13,14 +13,14 @@
 
   .header {
     @apply mb-6 space-y-2;
+  }
 
-    .header-title {
-      @apply font-display text-4xl text-white;
-    }
+  .header-title {
+    @apply font-display text-4xl text-white;
+  }
 
-    .header-description {
-      @apply font-display;
-    }
+  .header-description {
+    @apply font-display;
   }
 
   .panel {
