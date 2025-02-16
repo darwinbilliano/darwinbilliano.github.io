@@ -2,12 +2,16 @@
 
 @theme {
   --font-*: initial;
-  --font-sans: "Nunito Sans";
-  --font-display: "Space Grotesk";
+  --font-sans: var(--font-nunito-sans);
+  --font-display: var(--font-space-grotesk);
 }
 
 @layer components {
   .btn {
     @apply inline-block rounded-sm border border-red-400 bg-red-500 px-6 py-2 text-white hover:brightness-110 active:brightness-125;
+  }
+
+  .panel {
+    @apply rounded-md border border-zinc-700 bg-zinc-900 p-4;
   }
 }
