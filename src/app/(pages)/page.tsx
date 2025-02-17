@@ -1,20 +1,23 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+
+const data = {
+  skills: [
+    { name: "C#", category: "Language" },
+    { name: "ASP.NET", category: "Web Framework" },
+    { name: "TypeScript", category: "Language" },
+    { name: "Next.js", category: "Web Framework" },
+    { name: "Tailwind CSS", category: "Web Framework" },
+    { name: "Git", category: "Tools" },
+    { name: "Docker", category: "Tools" },
+  ],
+};
 
 export const metadata: Metadata = {
   title: "Darwin Billiano",
 };
 
 export default function HomePage() {
-  const skills = [
-    "C#",
-    "ASP.NET",
-    "TypeScript",
-    "Next.js",
-    "Tailwind CSS",
-    "Git",
-    "Docker",
-  ];
+  const { skills } = data;
   return (
     <>
       <div id="hero" className="grid min-h-screen place-items-center">
@@ -25,9 +28,9 @@ export default function HomePage() {
               Hobbyist Software and Full-stack Developer
             </p>
           </header>
-          <Link className="btn" href="#about">
+          <a className="btn" href="#about">
             Learn More
-          </Link>
+          </a>
         </section>
       </div>
       <div id="about" className="flex min-h-screen flex-col items-center">
@@ -38,10 +41,12 @@ export default function HomePage() {
               Here are some technologies I&apos;ve used in past projects:
             </p>
           </header>
-          <ul className="grid grid-cols-[repeat(auto-fit,minmax(10rem,1fr))] gap-4">
-            {skills.map((skill, i) => (
-              <li key={i}>
-                <div className="panel text-center">{skill}</div>
+          <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
+            {skills.map(({ name }) => (
+              <li key={name}>
+                <div className="panel text-center duration-200 hover:scale-105">
+                  <p>{name}</p>
+                </div>
               </li>
             ))}
           </ul>
