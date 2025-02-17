@@ -1,7 +1,9 @@
+import { ReactNode } from "react";
+
 export default function PagesLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
     <div className="flex min-h-screen flex-col">
