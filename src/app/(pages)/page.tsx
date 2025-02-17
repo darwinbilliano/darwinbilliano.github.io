@@ -44,7 +44,7 @@ export default function HomePage() {
           <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
             {skills.map(({ name }) => (
               <li key={name}>
-                <div className="panel text-center">
+                <div className="panel text-center duration-200 hover:scale-105">
                   <p>{name}</p>
                 </div>
               </li>
