@@ -1,0 +1,32 @@
+{
+  "skills": [
+    {
+      "name": "C#",
+      "category": "Language"
+    },
+    {
+      "name": "ASP.NET",
+      "category": "Web Framework"
+    },
+    {
+      "name": "TypeScript",
+      "category": "Language"
+    },
+    {
+      "name": "Next.js",
+      "category": "Web Framework"
+    },
+    {
+      "name": "Tailwind CSS",
+      "category": "Web Framework"
+    },
+    {
+      "name": "Git",
+      "category": "Tools"
+    },
+    {
+      "name": "Docker",
+      "category": "Tools"
+    }
+  ]
+}

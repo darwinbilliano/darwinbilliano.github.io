@@ -1,23 +1,11 @@
+import content from "@/content/home.json";
 import type { Metadata } from "next";
-
-const data = {
-  skills: [
-    { name: "C#", category: "Language" },
-    { name: "ASP.NET", category: "Web Framework" },
-    { name: "TypeScript", category: "Language" },
-    { name: "Next.js", category: "Web Framework" },
-    { name: "Tailwind CSS", category: "Web Framework" },
-    { name: "Git", category: "Tools" },
-    { name: "Docker", category: "Tools" },
-  ],
-};
 
 export const metadata: Metadata = {
   title: "Darwin Billiano",
 };
 
 export default function HomePage() {
-  const { skills } = data;
   return (
     <>
       <div id="hero" className="grid min-h-screen place-items-center">
@@ -42,7 +30,7 @@ export default function HomePage() {
             </p>
           </header>
           <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
-            {skills.map(({ name }) => (
+            {content.skills.map(({ name }) => (
               <li key={name}>
                 <div className="panel text-center duration-200 hover:scale-105">
                   <p>{name}</p>
