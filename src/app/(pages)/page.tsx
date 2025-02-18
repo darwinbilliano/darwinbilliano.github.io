@@ -44,7 +44,7 @@ export default function HomePage() {
                       <Image src={asset} alt="" />
                     </div>
                     <div>
-                      <p className="text-white">{name}</p>
+                      <h2 className="text-white">{name}</h2>
                       <p className="text-sm">{category}</p>
                     </div>
                   </div>
