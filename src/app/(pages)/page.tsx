@@ -1,23 +1,13 @@
+import content from "@/content/home.json";
+import assets from "@/utils/assets";
 import type { Metadata } from "next";
-
-const data = {
-  skills: [
-    { name: "C#", category: "Language" },
-    { name: "ASP.NET", category: "Web Framework" },
-    { name: "TypeScript", category: "Language" },
-    { name: "Next.js", category: "Web Framework" },
-    { name: "Tailwind CSS", category: "Web Framework" },
-    { name: "Git", category: "Tools" },
-    { name: "Docker", category: "Tools" },
-  ],
-};
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Darwin Billiano",
 };
 
 export default function HomePage() {
-  const { skills } = data;
   return (
     <>
       <div id="hero" className="grid min-h-screen place-items-center">
@@ -34,21 +24,33 @@ export default function HomePage() {
         </section>
       </div>
       <div id="about" className="flex min-h-screen flex-col items-center">
-        <section className="section max-w-4xl">
+        <section className="section max-w-6xl">
           <header className="header">
             <h1 className="header-title">Skills</h1>
             <p className="header-description">
               Here are some technologies I&apos;ve used in past projects:
             </p>
           </header>
-          <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
-            {skills.map(({ name }) => (
-              <li key={name}>
-                <div className="panel text-center duration-200 hover:scale-105">
-                  <p>{name}</p>
-                </div>
-              </li>
-            ))}
+          <ul className="grid grid-cols-[repeat(auto-fit,minmax(14rem,1fr))] gap-4">
+            {content.skills.map(async ({ name, category, icon, color }) => {
+              const asset = await assets.svg(icon);
+              return (
+                <li key={name}>
+                  <div className="panel flex items-center gap-4 duration-200 hover:scale-105">
+                    <div
+                      className="size-16 rounded-md p-2"
+                      style={{ backgroundColor: color }}
+                    >
+                      <Image src={asset} alt="" />
+                    </div>
+                    <div>
+                      <h2 className="text-white">{name}</h2>
+                      <p className="text-sm">{category}</p>
+                    </div>
+                  </div>
+                </li>
+              );
+            })}
           </ul>
         </section>
       </div>

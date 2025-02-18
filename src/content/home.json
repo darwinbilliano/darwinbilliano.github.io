@@ -1,0 +1,46 @@
+{
+  "skills": [
+    {
+      "name": "C#",
+      "category": "Language",
+      "icon": "skills/csharp-svgrepo-com.svg",
+      "color": "#66247940"
+    },
+    {
+      "name": "ASP.NET",
+      "category": "Web Framework",
+      "icon": "skills/dotnet-svgrepo-com.svg",
+      "color": "#6d419c40"
+    },
+    {
+      "name": "TypeScript",
+      "category": "Language",
+      "icon": "skills/typescript-official-svgrepo-com.svg",
+      "color": "#3177c640"
+    },
+    {
+      "name": "Next.js",
+      "category": "Web Framework",
+      "icon": "skills/nextjs-svgrepo-com.svg",
+      "color": "#ffffff40"
+    },
+    {
+      "name": "Tailwind CSS",
+      "category": "Web Framework",
+      "icon": "skills/tailwind-svgrepo-com.svg",
+      "color": "#44a8b340"
+    },
+    {
+      "name": "Git",
+      "category": "Tools",
+      "icon": "skills/git-svgrepo-com.svg",
+      "color": "#ee513a40"
+    },
+    {
+      "name": "Docker",
+      "category": "Tools",
+      "icon": "skills/docker-svgrepo-com.svg",
+      "color": "#1794d440"
+    }
+  ]
+}
