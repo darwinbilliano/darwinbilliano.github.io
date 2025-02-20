@@ -1,5 +1,5 @@
-import { ReactNode } from "react";
 import Footer from "@/components/footer";
+import type { ReactNode } from "react";
 
 export default function PagesLayout({
   children,
