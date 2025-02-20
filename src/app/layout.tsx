@@ -1,6 +1,6 @@
+import "@/styles/globals.css";
 import { Nunito_Sans, Space_Grotesk } from "next/font/google";
 import type { ReactNode } from "react";
-import "./globals.css";
 
 const nunitoSans = Nunito_Sans({
   subsets: ["latin"],
