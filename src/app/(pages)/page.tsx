@@ -1,4 +1,4 @@
-import content from "@/content/home.json";
+import { skills } from "@/content/about.json";
 import assets from "@/utils/assets";
 import type { Metadata } from "next";
 import Image from "next/image";
@@ -32,7 +32,7 @@ export default function HomePage() {
             </p>
           </header>
           <ul className="grid grid-cols-[repeat(auto-fit,minmax(14rem,1fr))] gap-4">
-            {content.skills.map(async ({ name, category, icon, color }) => {
+            {skills.map(async ({ name, category, icon, color }) => {
               const asset = await assets.svg(icon);
               return (
                 <li key={name}>
