@@ -15,23 +15,23 @@
     @apply brightness-95;
   }
 
-  .header {
-    @apply mb-6 space-y-2;
-  }
-
-  .header-title {
-    @apply font-display text-4xl text-white;
-  }
-
-  .header-description {
-    @apply font-display;
-  }
-
-  .panel {
+  .card {
     @apply rounded-md border border-zinc-700 bg-zinc-900 p-4;
   }
 
   .section {
-    @apply w-full px-8 py-12 sm:px-12;
+    @apply w-full space-y-6 px-8 py-12 sm:px-12;
+  }
+
+  .section-header {
+    @apply space-y-2;
+  }
+
+  .section-title {
+    @apply font-display text-4xl text-white;
+  }
+
+  .section-description {
+    @apply font-display;
   }
 }

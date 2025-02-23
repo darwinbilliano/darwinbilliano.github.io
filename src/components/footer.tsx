@@ -1,3 +1,9 @@
 export function Footer() {
-  return <footer className="section text-center">&copy; 2025 Darwin Billiano</footer>;
+  return (
+    <footer>
+      <section className="section text-center">
+        <p>&copy; 2025 Darwin Billiano</p>
+      </section>
+    </footer>
+  );
 }
