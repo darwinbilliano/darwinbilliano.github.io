@@ -8,7 +8,11 @@
 
 @layer components {
   .btn {
-    @apply inline-block rounded-sm border border-red-300 bg-red-500 px-6 py-2 text-white hover:brightness-95;
+    @apply inline-block rounded-sm border border-red-300 bg-red-500 px-6 py-2 text-white;
+  }
+
+  .btn:hover {
+    @apply brightness-95;
   }
 
   .header {
