@@ -1,5 +1,4 @@
 import { skills } from "@/content/about/skills.json";
-import assets from "@/utils/assets";
 import type { Metadata } from "next";
 import Image from "next/image";
 
@@ -28,22 +27,19 @@ export default function HomePage() {
             <p className="header-description">Here are some technologies I&apos;ve used in past projects:</p>
           </header>
           <ul className="grid grid-cols-[repeat(auto-fit,minmax(14rem,1fr))] gap-4">
-            {skills.map(async ({ name, category, icon, style }) => {
-              const asset = await assets.svg(icon);
-              return (
-                <li key={name}>
-                  <div className="panel flex items-center gap-4 duration-200 hover:scale-105">
-                    <div className="size-16 rounded-md p-2" style={style}>
-                      <Image src={asset} alt={name} />
-                    </div>
-                    <div>
-                      <h2 className="text-white">{name}</h2>
-                      <p className="text-sm">{category}</p>
-                    </div>
+            {skills.map(({ name, category, icon, style }) => (
+              <li key={name}>
+                <div className="panel flex items-center gap-4 duration-200 hover:scale-105">
+                  <div className="rounded-md p-2" style={style}>
+                    <Image src={icon} alt={name} width={48} height={48} />
                   </div>
-                </li>
-              );
-            })}
+                  <div>
+                    <h2 className="text-white">{name}</h2>
+                    <p className="text-sm">{category}</p>
+                  </div>
+                </div>
+              </li>
+            ))}
           </ul>
         </section>
       </div>
