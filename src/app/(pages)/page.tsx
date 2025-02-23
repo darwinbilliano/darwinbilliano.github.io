@@ -11,22 +11,25 @@ export default function HomePage() {
     <>
       <div id="hero" className="grid min-h-screen place-items-center">
         <section className="section text-center">
-          <header className="header">
-            <h1 className="header-title md:text-7xl">Darwin Billiano</h1>
-            <p className="header-description md:text-xl">Hobbyist Software and Full-stack Developer</p>
+          <header className="section-header">
+            <h1 className="section-title md:text-7xl">Darwin Billiano</h1>
+            <p className="section-description md:text-xl">Hobbyist Software and Full-stack Developer</p>
           </header>
+<div>
           <a className="btn" href="#about">
             Learn More
           </a>
+          </div>
         </section>
       </div>
       <div className="min-h-screen">
         <div id="about" className="flex flex-col items-center">
           <section className="section max-w-6xl">
-            <header className="header">
-              <h1 className="header-title">Skills</h1>
-              <p className="header-description">Here are some technologies I&apos;ve used in past projects:</p>
+            <header className="section-header">
+              <h1 className="section-title">Skills</h1>
+              <p className="section-description">Here are some technologies I&apos;ve used in past projects:</p>
             </header>
+            <div>
             <ul className="grid grid-cols-[repeat(auto-fit,minmax(14rem,1fr))] gap-4">
               {skills.map(({ name, category, icon, style }) => (
                 <li key={name}>
@@ -42,6 +45,7 @@ export default function HomePage() {
                 </li>
               ))}
             </ul>
+            </div>
           </section>
         </div>
       </div>
