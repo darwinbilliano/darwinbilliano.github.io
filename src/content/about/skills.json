@@ -4,49 +4,65 @@
       "name": "C#",
       "category": "Language",
       "icon": "skills/csharp.svg",
-      "color": "#66247940"
+      "style": {
+        "backgroundColor": "#66247940"
+      }
     },
     {
       "name": "ASP.NET",
       "category": "Web Framework",
       "icon": "skills/dotnet.svg",
-      "color": "#6d419c40"
+      "style": {
+        "backgroundColor": "#6d419c40"
+      }
     },
     {
       "name": "TypeScript",
       "category": "Language",
       "icon": "skills/typescript.svg",
-      "color": "#3177c640"
+      "style": {
+        "backgroundColor": "#3177c640"
+      }
     },
     {
       "name": "Next.js",
       "category": "Web Framework",
       "icon": "skills/nextjs.svg",
-      "color": "#ffffff40"
+      "style": {
+        "backgroundColor": "#ffffff40"
+      }
     },
     {
       "name": "Tailwind CSS",
       "category": "Web Framework",
       "icon": "skills/tailwind.svg",
-      "color": "#44a8b340"
+      "style": {
+        "backgroundColor": "#44a8b340"
+      }
     },
     {
       "name": "Git",
       "category": "Tools",
       "icon": "skills/git.svg",
-      "color": "#ee513a40"
+      "style": {
+        "backgroundColor": "#ee513a40"
+      }
     },
     {
       "name": "Docker",
       "category": "Tools",
       "icon": "skills/docker.svg",
-      "color": "#1794d440"
+      "style": {
+        "backgroundColor": "#1794d440"
+      }
     },
     {
       "name": "Arch Linux",
       "category": "Tools",
       "icon": "skills/arch-linux.svg",
-      "color": "#1793d140"
+      "style": {
+        "backgroundColor": "#1793d140"
+      }
     }
   ]
 }

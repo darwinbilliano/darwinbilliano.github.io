@@ -28,12 +28,12 @@ export default function HomePage() {
             <p className="header-description">Here are some technologies I&apos;ve used in past projects:</p>
           </header>
           <ul className="grid grid-cols-[repeat(auto-fit,minmax(14rem,1fr))] gap-4">
-            {skills.map(async ({ name, category, icon, color }) => {
+            {skills.map(async ({ name, category, icon, style }) => {
               const asset = await assets.svg(icon);
               return (
                 <li key={name}>
                   <div className="panel flex items-center gap-4 duration-200 hover:scale-105">
-                    <div className="size-16 rounded-md p-2" style={{ backgroundColor: color }}>
+                    <div className="size-16 rounded-md p-2" style={style}>
                       <Image src={asset} alt="" />
                     </div>
                     <div>
