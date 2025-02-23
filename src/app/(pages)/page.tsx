@@ -20,28 +20,30 @@ export default function HomePage() {
           </a>
         </section>
       </div>
-      <div id="about" className="flex min-h-screen flex-col items-center">
-        <section className="section max-w-6xl">
-          <header className="header">
-            <h1 className="header-title">Skills</h1>
-            <p className="header-description">Here are some technologies I&apos;ve used in past projects:</p>
-          </header>
-          <ul className="grid grid-cols-[repeat(auto-fit,minmax(14rem,1fr))] gap-4">
-            {skills.map(({ name, category, icon, style }) => (
-              <li key={name}>
-                <div className="panel flex items-center gap-4 duration-200 hover:scale-105">
-                  <div className="rounded-md p-2" style={style}>
-                    <Image src={icon} alt={name} width={48} height={48} />
+      <div className="min-h-screen">
+        <div id="about" className="flex flex-col items-center">
+          <section className="section max-w-6xl">
+            <header className="header">
+              <h1 className="header-title">Skills</h1>
+              <p className="header-description">Here are some technologies I&apos;ve used in past projects:</p>
+            </header>
+            <ul className="grid grid-cols-[repeat(auto-fit,minmax(14rem,1fr))] gap-4">
+              {skills.map(({ name, category, icon, style }) => (
+                <li key={name}>
+                  <div className="panel flex items-center gap-4 duration-200 hover:scale-105">
+                    <div className="rounded-md p-2" style={style}>
+                      <Image src={icon} alt={name} width={48} height={48} />
+                    </div>
+                    <div>
+                      <h2 className="text-white">{name}</h2>
+                      <p className="text-sm">{category}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h2 className="text-white">{name}</h2>
-                    <p className="text-sm">{category}</p>
-                  </div>
-                </div>
-              </li>
-            ))}
-          </ul>
-        </section>
+                </li>
+              ))}
+            </ul>
+          </section>
+        </div>
       </div>
     </>
   );
