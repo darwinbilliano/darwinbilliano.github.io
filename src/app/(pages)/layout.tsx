@@ -1,4 +1,4 @@
-import Footer from "@/components/footer";
+import { Footer } from "@/components/footer";
 import type { ReactNode } from "react";
 
 export default function PagesLayout({
