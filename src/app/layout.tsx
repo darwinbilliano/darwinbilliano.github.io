@@ -18,10 +18,7 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html
-      className={`scroll-smooth ${nunitoSans.variable} ${spaceGrotesk.variable}`}
-      lang="en"
-    >
+    <html className={`scroll-smooth ${nunitoSans.variable} ${spaceGrotesk.variable}`} lang="en">
       <body className="bg-zinc-950 text-zinc-300">{children}</body>
     </html>
   );
