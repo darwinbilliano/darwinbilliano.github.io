@@ -34,7 +34,7 @@ export default function HomePage() {
                 <li key={name}>
                   <div className="panel flex items-center gap-4 duration-200 hover:scale-105">
                     <div className="size-16 rounded-md p-2" style={style}>
-                      <Image src={asset} alt="" />
+                      <Image src={asset} alt={name} />
                     </div>
                     <div>
                       <h2 className="text-white">{name}</h2>
