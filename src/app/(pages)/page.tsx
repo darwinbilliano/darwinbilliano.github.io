@@ -14,9 +14,7 @@ export default function HomePage() {
         <section className="section text-center">
           <header className="header">
             <h1 className="header-title md:text-7xl">Darwin Billiano</h1>
-            <p className="header-description md:text-xl">
-              Hobbyist Software and Full-stack Developer
-            </p>
+            <p className="header-description md:text-xl">Hobbyist Software and Full-stack Developer</p>
           </header>
           <a className="btn" href="#about">
             Learn More
@@ -27,9 +25,7 @@ export default function HomePage() {
         <section className="section max-w-6xl">
           <header className="header">
             <h1 className="header-title">Skills</h1>
-            <p className="header-description">
-              Here are some technologies I&apos;ve used in past projects:
-            </p>
+            <p className="header-description">Here are some technologies I&apos;ve used in past projects:</p>
           </header>
           <ul className="grid grid-cols-[repeat(auto-fit,minmax(14rem,1fr))] gap-4">
             {skills.map(async ({ name, category, icon, color }) => {
@@ -37,10 +33,7 @@ export default function HomePage() {
               return (
                 <li key={name}>
                   <div className="panel flex items-center gap-4 duration-200 hover:scale-105">
-                    <div
-                      className="size-16 rounded-md p-2"
-                      style={{ backgroundColor: color }}
-                    >
+                    <div className="size-16 rounded-md p-2" style={{ backgroundColor: color }}>
                       <Image src={asset} alt="" />
                     </div>
                     <div>
