@@ -1,4 +1,4 @@
-import { skills } from "@/content/about/skills.json";
+import { skills } from "@/content/about/skills";
 import type { Metadata } from "next";
 import Image from "next/image";
 
