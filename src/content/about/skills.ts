@@ -2,65 +2,41 @@ export const skills = [
   {
     name: "C#",
     category: "Language",
-    icon: "/static/images/about/skills/csharp.svg",
-    style: {
-      backgroundColor: "#66247940",
-    },
+    icon: "skill-icons:cs",
   },
   {
     name: "ASP.NET",
     category: "Web Framework",
-    icon: "/static/images/about/skills/dotnet.svg",
-    style: {
-      backgroundColor: "#6d419c40",
-    },
+    icon: "skill-icons:dotnet",
   },
   {
     name: "TypeScript",
     category: "Language",
-    icon: "/static/images/about/skills/typescript.svg",
-    style: {
-      backgroundColor: "#3177c640",
-    },
+    icon: "skill-icons:typescript",
   },
   {
     name: "Next.js",
     category: "Web Framework",
-    icon: "/static/images/about/skills/nextjs.svg",
-    style: {
-      backgroundColor: "#ffffff40",
-    },
+    icon: "skill-icons:nextjs-dark",
   },
   {
     name: "Tailwind CSS",
     category: "Web Framework",
-    icon: "/static/images/about/skills/tailwind.svg",
-    style: {
-      backgroundColor: "#44a8b340",
-    },
+    icon: "skill-icons:tailwindcss-dark",
   },
   {
     name: "Git",
     category: "Tools",
-    icon: "/static/images/about/skills/git.svg",
-    style: {
-      backgroundColor: "#ee513a40",
-    },
+    icon: "skill-icons:git",
   },
   {
     name: "Docker",
     category: "Tools",
-    icon: "/static/images/about/skills/docker.svg",
-    style: {
-      backgroundColor: "#1794d440",
-    },
+    icon: "skill-icons:docker",
   },
   {
     name: "Arch Linux",
     category: "Tools",
-    icon: "/static/images/about/skills/arch-linux.svg",
-    style: {
-      backgroundColor: "#1793d140",
-    },
+    icon: "skill-icons:arch-dark",
   },
 ];
