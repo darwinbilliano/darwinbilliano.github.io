@@ -1,6 +1,6 @@
-import { skills } from "@/content/about/skills.json";
+import { skills } from "@/content/about/skills";
+import { Icon } from "@iconify/react";
 import type { Metadata } from "next";
-import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Darwin Billiano",
@@ -31,11 +31,11 @@ export default function HomePage() {
             </header>
             <div>
               <ul className="grid grid-cols-[repeat(auto-fit,minmax(14rem,1fr))] gap-4">
-                {skills.map(({ name, category, icon, style }) => (
+                {skills.map(({ name, category, icon }) => (
                   <li key={name}>
                     <div className="card flex items-center gap-4 duration-200 hover:scale-105">
-                      <div className="rounded-md p-2" style={style}>
-                        <Image src={icon} alt={name} width={48} height={48} />
+                      <div>
+                        <Icon className="size-16" icon={icon} />
                       </div>
                       <div>
                         <h2 className="text-white">{name}</h2>

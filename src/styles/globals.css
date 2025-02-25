@@ -8,7 +8,7 @@
 
 @layer components {
   .btn {
-    @apply inline-block rounded-sm border border-red-300 bg-red-500 px-6 py-2 text-white;
+    @apply inline-block rounded-sm bg-red-500 px-6 py-2 text-white shadow-md shadow-red-600;
   }
 
   .btn:hover {
@@ -16,7 +16,7 @@
   }
 
   .card {
-    @apply rounded-md border border-zinc-700 bg-zinc-900 p-4;
+    @apply rounded-lg border-zinc-700 bg-zinc-900 p-4;
   }
 
   .section {
