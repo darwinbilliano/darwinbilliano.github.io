@@ -18,6 +18,7 @@ export default function HomePage() {
           <div>
             <a className="btn" href="#about">
               Learn More
+              <Icon icon="lucide:chevrons-down" />
             </a>
           </div>
         </section>

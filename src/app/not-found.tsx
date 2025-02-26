@@ -1,3 +1,4 @@
+import { Icon } from "@iconify/react";
 import { Metadata } from "next";
 import Link from "next/link";
 
@@ -16,6 +17,7 @@ export default function NotFoundPage() {
         <div>
           <Link className="btn" href="/">
             Go Back
+            <Icon icon="lucide:house" />
           </Link>
         </div>
       </section>
