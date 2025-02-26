@@ -1,4 +1,4 @@
-import { skills } from "@/content/about/skills";
+import { skills } from "@/content/about";
 import { Icon } from "@iconify/react";
 import type { Metadata } from "next";
 
